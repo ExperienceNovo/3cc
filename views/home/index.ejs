@@ -1,0 +1,12 @@
+<% if (currentUser !== undefined) { %>
+    <script>
+        var currentUser = {
+            id: '<%= currentUser.id %>',
+            username: '<%= currentUser.username %>',
+            email: '<%= currentUser.email %>',
+            createdAt: '<%= currentUser.createdAt %>',
+            updatedAt: '<%= currentUser.updatedAt %>'
+        };
+    </script>
+<% } %>
+<div ui-view="main" id="main-container" style="width:100%;margin:0px" data-ng-view data-autoscroll></div>
