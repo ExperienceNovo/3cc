@@ -2,7 +2,7 @@
   "name": "1.0.0",
   "private": true,
   "version": "0.0.0",
-  "description": "Fax2DC LLC",
+  "description": "Three Corners Collevtive",
   "keywords": [],
   "dependencies": {
     "bcryptjs": "~2.1.0",
@@ -46,13 +46,13 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ExperienceNOVO/Fax2DC.git"
+    "url": "git+https://github.com/ExperienceNOVO/3cc.git"
   },
-  "author": "Fax2DC",
+  "author": "NOVO LLC",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ExperienceNOVO/Fax2DC/issues"
+    "url": "https://github.com/ExperienceNOVO/3cc/issues"
   },
-  "homepage": "https://github.com/ExperienceNOVO/Fax2DC#readme",
+  "homepage": "https://github.com/ExperienceNOVO/3cc#readme",
   "devDependencies": {}
 }
