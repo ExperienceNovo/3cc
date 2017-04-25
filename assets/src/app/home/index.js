@@ -14,6 +14,6 @@ angular.module( '3cc.home', [
 }])
 
 .controller( 'HomeCtrl', [ '$scope', 'titleService', function HomeController( $scope, titleService ) {
-	titleService.setTitle('Continuing the Mission');
+	titleService.setTitle('Three Corners Collective');
 	$scope.date = new Date();
 }]);
