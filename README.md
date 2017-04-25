@@ -1,3 +1,3 @@
-# continuing the mission
+# three corners collective
 
-###### Service dogs for veterans
+###### music label
