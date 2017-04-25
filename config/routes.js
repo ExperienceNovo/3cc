@@ -8,6 +8,8 @@ module.exports.routes = {
 
   'get /': 'HomeController.index',
   'get /about': 'HomeController.index',
+  'get /artists': 'HomeController.index',
+  'get /artist/:path': 'HomeController.index',
 
   'get /login': 'HomeController.index',
   'get /logout': 'AuthController.logout',
