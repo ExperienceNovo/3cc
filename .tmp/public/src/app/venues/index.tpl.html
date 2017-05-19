@@ -1,8 +1,8 @@
 <section id="about" class="container content-section" style="text-align:left">
   <div class="container">
         <div class="">
-            <h2>Three Corners Collective</h2>
-            <p>Venues</p>
+            <h2>Venues</h2>
+            <p>Three Corners Collective</p>
         </div>
     </div>
 </section>
@@ -25,7 +25,7 @@
 <section id="about-1" class="content-section" style="text-align:left">
     <div class="about-section">
         <div class="container">
-            <div ng-repeat="venue in venues" class="col-lg-8 col-lg-offset-2">
+            <div ng-repeat="venue in venues" class="">
                 <h2><a href="venue/{{venue.title}}">{{venue.title}}</a></h2>
                 <p style="color:white">{{venue.address}}</p>
                 <p style="color:white">{{venue.description}}</p>
@@ -33,3 +33,5 @@
         </div>
     </div>
 </section>
+
+<div ng-include="'footer/index.tpl.html'"></div>
