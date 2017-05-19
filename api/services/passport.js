@@ -79,6 +79,10 @@ passport.connect = function (req, query, profile, next) {
     return next(new Error('No authentication provider was identified.'));
   }
 
+
+  console.log(profile);  // <= check the content given by fb/google/etc about the user
+
+
   // If the profile object contains a list of emails, grab the first one and
   // add it to the user.
   if (profile.hasOwnProperty('emails')) {
@@ -88,6 +92,45 @@ passport.connect = function (req, query, profile, next) {
   if (profile.hasOwnProperty('username')) {
     user.username = profile.username;
   }
+  // Else grab display name
+  if (!user.username && profile.hasOwnProperty('displayName')) {
+    user.username = profile.displayName;
+  }
+
+  // If new user set socialAccounts to empty object, else set to preexisting
+  if (req.user === undefined) {
+    user.socialAccounts = {};
+  }
+  else {
+    user.socialAccounts = req.user.socialAccounts
+  }
+
+  switch (provider) {
+    case 'facebook':
+      user.socialAccounts.facebook = {};
+      user.socialAccounts.facebook.profileUrl = profile.profileUrl;
+      user.socialAccounts.facebook.displayName = profile.displayName;
+      user.socialAccounts.facebook.profilePic = profile.photos[0].value;
+      break;
+    case 'google':
+      user.socialAccounts.google = {};
+      user.socialAccounts.google.profileUrl = profile._json.url;
+      user.socialAccounts.google.displayName = profile.displayName;
+      user.socialAccounts.google.profilePic = profile.photos[0].value;
+      break;
+    case 'twitter':
+      user.socialAccounts.twitter = {};
+      user.socialAccounts.twitter.profileUrl = 'http://twitter.com/' + profile.username;
+      user.socialAccounts.twitter.displayName = profile.displayName;
+
+      //split displayname into first and last
+
+      user.socialAccounts.twitter.handle = profile.username;
+      user.socialAccounts.twitter.profilePic = profile.photos[0].value;
+      break;
+    default:
+      console.log('provider not caught')
+  }
 
   // If neither an email or a username was available in the profile, we don't
   // have a way of identifying the user in the future. Throw an error and let
@@ -95,6 +138,7 @@ passport.connect = function (req, query, profile, next) {
   if (!user.username && !user.email) {
     return next(new Error('Neither a username nor email was available'));
   }
+
 
   Passport.findOne({
     provider   : provider
@@ -130,7 +174,6 @@ passport.connect = function (req, query, profile, next) {
             if (err) {
               return next(err);
             }
-
             next(err, user);
           });
         });
@@ -198,6 +241,11 @@ passport.endpoint = function (req, res) {
   if (!strategies.hasOwnProperty(provider)) {
     return res.redirect('/login');
   }
+
+
+  //THIS IS WHERE YOU WOULD SET CUSTOM APP OPTIONS ON A PER USER BASIS....
+  //we need to store the app key and secret... outside of having a single site config
+  console.log(strategies[provider])
 
   // Attach scope if it has been set in the config
   if (strategies[provider].hasOwnProperty('scope')) {

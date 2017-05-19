@@ -1,12 +1,12 @@
 /**
- * VenueController
+ * ArtistController
  *
  */
 
 module.exports = {
 
 	getOne: function(req, res) {
-		Venue.find({id:req.param('id')})
+		Artist.find({id:req.param('id')})
 		.then(function(model) {
 			Venue.subscribe(req, model);
 			res.json(model);
@@ -17,7 +17,7 @@ module.exports = {
 	},
 
 	getAll: function(req, res) {
-		Venue.find()
+		Artist.find()
 		.then(function(models) {
 			Venue.watch(req);
 			Venue.subscribe(req, models);
@@ -29,7 +29,7 @@ module.exports = {
 	},
 
 	getCount: function(req, res) {
-		Venue.count()
+		Artist.count()
 		.exec(function(err, venueCount) {
 			if (!err){
 				Venue.watch(req);
@@ -41,14 +41,9 @@ module.exports = {
 	create: function (req, res) {
 		var model = {
 			title: req.param('title'),
-			address: req.param('address'),
 			description: req.param('description'),
-			facebook: req.param('facebook'),
-			twitter: req.param('twitter'),
-			google: req.param('google'),
-			booking: req.param('booking'),
+			socialAccounts: req.param('socialAccounts'),
 		};
-		console.log(model)
 		Venue.create(model)
 		.exec(function(err, venue) {
 			if (err) {return console.log(err);}

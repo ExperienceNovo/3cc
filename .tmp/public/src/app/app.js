@@ -13,6 +13,11 @@ angular.module( '3cc', [
     '3cc.about',
     '3cc.artist',
     '3cc.artists',
+    '3cc.dashboard',
+    '3cc.login',
+    '3cc.register',
+    '3cc.venue',
+    '3cc.venues',
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
