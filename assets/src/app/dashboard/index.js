@@ -15,5 +15,4 @@ angular.module( '3cc.dashboard', [
 
 .controller( 'DashboardCtrl', [ '$scope', 'titleService', function DashboardController( $scope, titleService ) {
 	titleService.setTitle('Dashboard - Three Corners Collective');
-	$scope.date = new Date();
 }]);

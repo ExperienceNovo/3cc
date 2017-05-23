@@ -10,6 +10,8 @@ module.exports.routes = {
   'get /about': 'HomeController.index',
   'get /artists': 'HomeController.index',
   'get /artist/:path': 'HomeController.index',
+  'get /audiences': 'HomeController.index',
+  'get /dashboard': 'HomeController.index',
   'get /venues': 'HomeController.index',
   'get /venue/:path': 'HomeController.index',
 
