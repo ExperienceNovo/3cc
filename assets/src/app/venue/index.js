@@ -9,10 +9,17 @@ angular.module( '3cc.venue', [
 				controller: 'VenueCtrl',
 				templateUrl: 'venue/index.tpl.html'
 			}
-		}
+		},
+		resolve: {
+            venue: ['VenueModel', function(VenueModel) {
+				//return VenueModel.getByUrl();
+				return null;
+            }]
+        }
 	});
 }])
 
-.controller( 'VenueCtrl', [ '$scope', 'titleService', function VenueController( $scope, titleService ) {
+.controller( 'VenueCtrl', [ '$scope', 'titleService', 'venue', function VenueController( $scope, titleService, venue ) {
+	$scope.venue = venue;
 	titleService.setTitle('Venue - Three Corners Collective');
 }]);
