@@ -55,7 +55,7 @@ module.exports.routes = {
   /**
    * Venue routes
    */
-  'get /api/venue': 'VenueController.getAll',
+  'get /api/venue': 'VenueController.getSome',
   'post /api/venue/update': 'VenueController.update',
   'post /api/venue': 'VenueController.create',
   'get /api/venue/:id': 'VenueController.getOne',

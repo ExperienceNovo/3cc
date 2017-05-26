@@ -9,11 +9,17 @@ angular.module( '3cc.merch', [
 				controller: 'MerchCtrl',
 				templateUrl: 'merch/index.tpl.html'
 			}
-		}
+		},
+		resolve: {
+            merch: ['$stateParams','MerchModel', function($stateParams, MerchModel) {
+				return MerchModel.getSome(1, 0, 'createdAt DESC', {urlTitle: $stateParams.path});
+            }]
+        }
 	});
 }])
 
-.controller( 'MerchCtrl', [ '$scope', 'titleService', function MerchController( $scope, titleService ) {
+.controller( 'MerchCtrl', [ '$scope', 'titleService', 'merch', function MerchController( $scope, titleService, merch ) {
 	titleService.setTitle('Artist - Three Corners Collective');
-	$scope.date = new Date();
+	$scope.merch = merch[0];
+	console.log(merch);
 }]);

@@ -20,7 +20,8 @@ module.exports = {
 		var limit = req.query.limit;
 		var skip = req.query.skip;
 		var sort = req.query.sort;
-		Merch.getSome(limit, skip, sort)
+		var filter = req.query.filter;
+		Merch.getSome(limit, skip, sort, filter)
 		.then(function(models) {
 			Merch.watch(req);
 			Merch.subscribe(req, models);
@@ -52,19 +53,13 @@ module.exports = {
 	},
 
 	create: function (req, res) {
-		var description = req.param('description');
-		var price = req.param('price');
-		var stock = req.param('stock');
-		var title = req.param('title');
-		var urlTitle = req.param('title').replace(' ','-').toLowerCase();
-		var user = req.param('user');
 		var model = {
-			description: description,
-			price: price,
-			stock: stock,
-			title: title,
-			urlTitle: urlTitle,
-			user: user
+			description: req.param('description'),
+			price: req.param('price'),
+			stock: req.param('stock'),
+			title: req.param('title'),
+			urlTitle: req.param('title').replace(/ /g,"-").toLowerCase(),
+			user: req.param('user')
 		};
 		Merch.create(model)
 		.exec(function(err, merch) {

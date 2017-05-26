@@ -11,15 +11,16 @@ angular.module( '3cc.venue', [
 			}
 		},
 		resolve: {
-            venue: ['VenueModel', function(VenueModel) {
-				//return VenueModel.getByUrl();
-				return null;
+            venue: ['$stateParams','VenueModel', function($stateParams, VenueModel) {
+				return VenueModel.getSome(1, 0, 'createdAt DESC', {urlTitle: $stateParams.path});
+				//return null;
             }]
         }
 	});
 }])
 
 .controller( 'VenueCtrl', [ '$scope', 'titleService', 'venue', function VenueController( $scope, titleService, venue ) {
-	$scope.venue = venue;
+	$scope.venue = venue[0];
+	console.log(venue)
 	titleService.setTitle('Venue - Three Corners Collective');
 }]);

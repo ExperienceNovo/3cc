@@ -9,8 +9,6 @@
 
 
 
-
-
 <section ng-show="currentUser" class="container">
 
     <form role="form">
@@ -32,7 +30,7 @@
     <div class="about-section">
         <div class="container">
             <div ng-repeat="venue in venues" class="">
-                <h2><a href="venue/{{venue.title}}">{{venue.title}}</a></h2>
+                <h2><a href="venue/{{venue.urlTitle}}">{{venue.title}}</a></h2>
                 <p style="color:white">{{venue.address}}</p>
                 <p style="color:white">{{venue.description}}</p>
             </div>

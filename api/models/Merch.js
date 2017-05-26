@@ -11,6 +11,10 @@ module.exports = {
         description: {
             type: 'string',
         },
+        imageUrl: {
+            type: 'string',
+            defaultsTo: 'images/bg.png'
+        },
         price: {
             type: 'string',
         },
@@ -36,8 +40,10 @@ module.exports = {
         });
     },
 
-    getSome: function(limiting, skipping, sort) {
+    getSome: function(limiting, skipping, sort, filter) {
+        console.log(filter)
         return Merch.find()
+        .where(JSON.parse(filter))
         .sort(sort)
         .limit(limiting)
         .skip(skipping)

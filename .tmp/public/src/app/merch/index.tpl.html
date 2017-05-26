@@ -37,9 +37,10 @@
 <div class="spacing-50"></div>
 <div class="container" style="text-align:left">
 	<div class="pull-left">
-		<h2>Merch</h2>
-		<h5><span class="grey"><a href="artist/1">merch owner</a></span></h5>
-		<h5><span class="grey"></span>88 in stock</h5>
+		<h2>{{merch.title}}</h2>
+		<h5><span class="grey"></span>${{merch.price}}</h5>
+		<h5><span class="grey"><a href="member/{{merch.user.username}}">{{merch.user.username}}</a></span></h5>
+		<h5><span class="grey"></span>{{merch.stock}} in stock</h5>
 	</div>
 </div>
 

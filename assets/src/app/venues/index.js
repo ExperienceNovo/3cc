@@ -12,7 +12,7 @@ angular.module( '3cc.venues', [
 		},
 		resolve: {
             venues: ['VenueModel', function(VenueModel) {
-				return VenueModel.getAll();
+				return VenueModel.getSome(100, 0, 'createdAt DESC', {});
             }]
         }
 	});
@@ -23,6 +23,8 @@ angular.module( '3cc.venues', [
 	$scope.currentUser = config.currentUser;
 	$scope.venues = venues;
     $scope.newVenue = {};
+
+    console.log(venues)
 
 	$scope.createVenue = function() {
         $scope.newVenue.user = config.currentUser.id;

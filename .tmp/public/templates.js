@@ -186,13 +186,13 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "        <div class=\"\">\n" +
     "            <h2>Audiences</h2>\n" +
     "            <p>Three Corners Collective</p>\n" +
-    "            <p>discover</p>\n" +
     "        </div>\n" +
     "</section>\n" +
     "\n" +
     "<section ng-show=\"currentUser\" class=\"container\">\n" +
     "    <form role=\"form\">\n" +
     "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.title\" type=\"text\" placeholder= \"merch title\"></div>\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.price\" type=\"text\" placeholder= \"merch price\"></div>\n" +
     "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.stock\" type=\"text\" placeholder= \"merch stock\"></div>\n" +
     "        <br><br>\n" +
     "        <textarea style=\"width:100%;height:250px\" ng-model=\"newMerch.description\" type=\"text\" placeholder= \"merch description\"></textarea>\n" +
@@ -204,9 +204,10 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
+    "            <h2 style=\"color:white\">Merch</h2>\n" +
     "            <div ng-repeat=\"item in merch\" class=\"col-md-4\">\n" +
     "                <h2><a href=\"merch/{{item.urlTitle}}\">{{item.title}}</a></h2>\n" +
-    "                <p style=\"color:white\">{{item.stock}}</p>\n" +
+    "                <p style=\"color:white\">${{item.price}}, {{item.stock}} in stock</p>\n" +
     "                <p style=\"color:white\">{{item.description}}</p>\n" +
     "                <p style=\"color:white\"><a href=\"member/{{item.user.username}}\">{{item.user.username}}</a></p>\n" +
     "\n" +
@@ -246,6 +247,7 @@ angular.module("dashboard/index.tpl.html", []).run(["$templateCache", function (
     "            <h2>create merch</h2>\n" +
     "            <form role=\"form\">\n" +
     "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.title\" type=\"text\" placeholder= \"merch title\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.price\" type=\"text\" placeholder= \"merch price\"></div>\n" +
     "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.stock\" type=\"text\" placeholder= \"merch stock\"></div>\n" +
     "                <br><br>\n" +
     "                <textarea style=\"width:100%;height:250px\" ng-model=\"newMerch.description\" type=\"text\" placeholder= \"merch description\"></textarea>\n" +
@@ -360,14 +362,20 @@ angular.module("footer/index.tpl.html", []).run(["$templateCache", function ($te
     "<section id=\"about-2\" class=\"content-section\" style=\"text-align:left\" ng-controller=\"FooterCtrl\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <div class=\"\">\n" +
-    "                <h4>{{date | date: 'yyyy'}} <a href=\"/\">Three Corners Collective</a></h4>\n" +
-    "                <img style=\"height:50px\" src=\"images/clear_logo.png\">\n" +
+    "			<div class=\"col-xs-10\">\n" +
+    "                <h4>{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:50px\" src=\"images/clear_logo.png\"> Three Corners Collective</a></h4>\n" +
+    "            </div>\n" +
+    "             <div class=\"col-xs-2\">\n" +
+    "                <h4 style=\"margin-top:10px\">\n" +
+    "                    <a href=\"https://www.facebook.com/threecornerscollective/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a>\n" +
+    "                    <a href=\"#\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a>\n" +
+    "                    <a href=\"https://www.instagram.com/threecornerscollective\" target=\"_blank\"><i class=\"fa fa-instagram\"></i></a>\n" +
+    "                    <a href=\"#\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a>\n" +
+    "                </h4>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</section>\n" +
-    "");
+    "</section>");
 }]);
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
@@ -390,7 +398,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "    </div>\n" +
     "</header>\n" +
     "\n" +
-    "<section id=\"about\" class=\"container content-section text-center\">\n" +
+    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
     "  <div class=\"container\">\n" +
     "        <div class=\"row\">\n" +
     "            <div class=\"col-lg-8 col-lg-offset-2\">\n" +
@@ -398,24 +406,20 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "                <p></p>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h1 style=\"color:black\">Artists</h1>\n" +
-    "                <p></p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h1 style=\"color:black\">Audiences</h1>\n" +
-    "                <p></p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h1 style=\"color:black\">Venues</h1>\n" +
-    "                <p></p>\n" +
-    "            </div>\n" +
+    "        <div class=\"col-md-12\">\n" +
+    "            <h1 style=\"color:black\">Artists</h1>\n" +
+    "            <p></p>\n" +
     "        </div>\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-12\">\n" +
-    "                <a href=\"/about\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Learn More</h1></a>\n" +
-    "            </div>\n" +
+    "        <div class=\"col-md-12\">\n" +
+    "            <h1 style=\"color:black\">Audiences</h1>\n" +
+    "            <p></p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-12\">\n" +
+    "            <h1 style=\"color:black\">Venues</h1>\n" +
+    "            <p></p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-12\">\n" +
+    "            <a href=\"/about\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Learn More</h1></a>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +
@@ -431,20 +435,14 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "</section>\n" +
     "\n" +
     "<section id=\"contact\" class=\"container content-section\" style=\"text-align:left\">\n" +
-    "    <div class=\"row\">\n" +
-    "        <div class=\"\">\n" +
-    "        </div>\n" +
+    "    <div class=\"col-md-4\">\n" +
+    "        <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
     "    </div>\n" +
-    "    <div class=\"row\">\n" +
-    "        <div class=\"col-md-4\">\n" +
-    "            <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-4\">\n" +
-    "            <a href=\"/audiences\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-4\">\n" +
-    "            <a href=\"/venues\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Venues</h1></a>\n" +
-    "        </div>\n" +
+    "    <div class=\"col-md-4\">\n" +
+    "        <a href=\"/audiences\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
+    "    </div>\n" +
+    "    <div class=\"col-md-4\">\n" +
+    "        <a href=\"/venues\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Venues</h1></a>\n" +
     "    </div>\n" +
     "    <div class=\"spacing-50\"></div>\n" +
     "</section>\n" +
@@ -543,9 +541,10 @@ angular.module("merch/index.tpl.html", []).run(["$templateCache", function ($tem
     "<div class=\"spacing-50\"></div>\n" +
     "<div class=\"container\" style=\"text-align:left\">\n" +
     "	<div class=\"pull-left\">\n" +
-    "		<h2>Merch</h2>\n" +
-    "		<h5><span class=\"grey\"><a href=\"artist/1\">merch owner</a></span></h5>\n" +
-    "		<h5><span class=\"grey\"></span>88 in stock</h5>\n" +
+    "		<h2>{{merch.title}}</h2>\n" +
+    "		<h5><span class=\"grey\"></span>${{merch.price}}</h5>\n" +
+    "		<h5><span class=\"grey\"><a href=\"member/{{merch.user.username}}\">{{merch.user.username}}</a></span></h5>\n" +
+    "		<h5><span class=\"grey\"></span>{{merch.stock}} in stock</h5>\n" +
     "	</div>\n" +
     "</div>\n" +
     "\n" +
@@ -679,13 +678,13 @@ angular.module("venue/index.tpl.html", []).run(["$templateCache", function ($tem
     "\n" +
     "<div class=\"profile-header\">\n" +
     "	<div class=\"member-cover\">\n" +
-    "		<img src=\"images/3ccbg.jpg\"/>\n" +
+    "		<img src=\"{{venue.coverUrl}}\"/>\n" +
     "	</div>\n" +
     "</div>\n" +
     "<div class=\"container\">\n" +
     "	<div class=\"pull-left\">\n" +
     "		<div style=\"\">\n" +
-    "			<img class=\"avatar\" ng-src=\"images/bg.png\"/>\n" +
+    "			<img class=\"avatar\" ng-src=\"{{venue.avatarUrl}}\"/>\n" +
     "			<div class=\"\"></div>\n" +
     "		</div>\n" +
     "	</div>\n" +
@@ -693,9 +692,10 @@ angular.module("venue/index.tpl.html", []).run(["$templateCache", function ($tem
     "<div class=\"spacing-50\"></div>\n" +
     "<div class=\"container\" style=\"text-align:left\">\n" +
     "	<div class=\"pull-left\">\n" +
-    "		<h2>Venue</h2>\n" +
-    "		<h5><span class=\"grey\">@venue-name</span></h5>\n" +
-    "		<h5><span class=\"grey\">venue info</span></h5>\n" +
+    "		<h2>{{venue.title}}</h2>\n" +
+    "		<h5><span class=\"grey\">@{{venue.title}}</span></h5>\n" +
+    "		<h5><span class=\"grey\">{{venue.description}}</span></h5>\n" +
+    "		<h5><span class=\"grey\">{{venue.address}}</span></h5>\n" +
     "	</div>\n" +
     "</div>\n" +
     "\n" +
@@ -733,8 +733,6 @@ angular.module("venues/index.tpl.html", []).run(["$templateCache", function ($te
     "\n" +
     "\n" +
     "\n" +
-    "\n" +
-    "\n" +
     "<section ng-show=\"currentUser\" class=\"container\">\n" +
     "\n" +
     "    <form role=\"form\">\n" +
@@ -756,7 +754,7 @@ angular.module("venues/index.tpl.html", []).run(["$templateCache", function ($te
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
     "            <div ng-repeat=\"venue in venues\" class=\"\">\n" +
-    "                <h2><a href=\"venue/{{venue.title}}\">{{venue.title}}</a></h2>\n" +
+    "                <h2><a href=\"venue/{{venue.urlTitle}}\">{{venue.title}}</a></h2>\n" +
     "                <p style=\"color:white\">{{venue.address}}</p>\n" +
     "                <p style=\"color:white\">{{venue.description}}</p>\n" +
     "            </div>\n" +

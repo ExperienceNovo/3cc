@@ -23,13 +23,13 @@
 
 <div class="profile-header">
 	<div class="member-cover">
-		<img src="images/3ccbg.jpg"/>
+		<img src="{{venue.coverUrl}}"/>
 	</div>
 </div>
 <div class="container">
 	<div class="pull-left">
 		<div style="">
-			<img class="avatar" ng-src="images/bg.png"/>
+			<img class="avatar" ng-src="{{venue.avatarUrl}}"/>
 			<div class=""></div>
 		</div>
 	</div>
@@ -37,9 +37,10 @@
 <div class="spacing-50"></div>
 <div class="container" style="text-align:left">
 	<div class="pull-left">
-		<h2>Venue</h2>
-		<h5><span class="grey">@venue-name</span></h5>
-		<h5><span class="grey">venue info</span></h5>
+		<h2>{{venue.title}}</h2>
+		<h5><span class="grey">@{{venue.title}}</span></h5>
+		<h5><span class="grey">{{venue.description}}</span></h5>
+		<h5><span class="grey">{{venue.address}}</span></h5>
 	</div>
 </div>
 

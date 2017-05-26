@@ -16,6 +16,23 @@ module.exports = {
 		});
 	},
 
+	getSome: function(req, res) {
+		var limit = req.query.limit;
+		var skip = req.query.skip;
+		var sort = req.query.sort;
+		var filter = req.query.filter
+		
+		Venue.getSome(limit, skip, sort, filter)
+		.then(function(models) {
+			Venue.watch(req);
+			Venue.subscribe(req, models);
+			res.json(models);
+		})
+		.fail(function(err) {
+			// An error occured
+		});
+	},
+
 	getAll: function(req, res) {
 		Venue.find()
 		.then(function(models) {
@@ -41,6 +58,7 @@ module.exports = {
 	create: function (req, res) {
 		var model = {
 			title: req.param('title'),
+			urlTitle: req.param('title').replace(/ /g,"-").toLowerCase(),
 			address: req.param('address'),
 			description: req.param('description'),
 			facebook: req.param('facebook'),

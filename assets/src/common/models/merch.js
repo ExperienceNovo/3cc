@@ -2,9 +2,10 @@ angular.module('models.merch', ['lodash', 'services', 'sails.io',])
 
 .service('MerchModel',['lodash', 'utils', '$sailsSocket', function(lodash, utils, $sailsSocket) {
 
-    this.getSome = function(limit, skip, sort) {
+    this.getSome = function(limit, skip, sort, filter) {
         var url = utils.prepareUrl('merch');
-        var query = {params:{limit:limit, skip:skip, sort: sort}};
+        var query = {params:{limit:limit, skip:skip, sort: sort, filter:filter}};
+        console.log(query)
         return $sailsSocket.get(url, query).then(success, error);
     };
     

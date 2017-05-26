@@ -6,6 +6,12 @@ angular.module('models.venue', ['lodash', 'services', 'sails.io',])
         return $sailsSocket.get(url).then(success, error);
     };
 
+    this.getSome = function(limit, skip, sort, filter) {
+        var url = utils.prepareUrl('venue');
+        var query = {params:{limit:limit, skip:skip, sort: sort, filter:filter}};
+        return $sailsSocket.get(url, query).then(success, error);
+    };
+
     this.create = function(newModel) {
         var url = utils.prepareUrl('venue');
         return $sailsSocket.post(url, newModel).then(success, error);

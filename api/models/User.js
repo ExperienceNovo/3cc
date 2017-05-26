@@ -18,6 +18,14 @@ module.exports = {
             type: 'string',
             //required: true
         },
+        avatarUrl: {
+            type: 'string',
+            defaultsTo: 'images/bg.png'
+        },
+        coverUrl: {
+            type: 'string',
+            defaultsTo: 'images/3ccbg.jpg'
+        },
         passports : { collection: 'Passport', via: 'user' }
     },
 

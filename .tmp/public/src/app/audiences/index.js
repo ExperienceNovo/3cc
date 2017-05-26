@@ -12,7 +12,7 @@ angular.module( '3cc.audiences', [
 		},
 		resolve: {
             merch: ['MerchModel', function(MerchModel) {
-				return MerchModel.getSome(100,0, 'createdAt DESC');
+				return MerchModel.getSome(100, 0, 'createdAt DESC', {});
             }]
         }
 	});
@@ -21,8 +21,7 @@ angular.module( '3cc.audiences', [
 .controller( 'AudiencesCtrl', [ '$scope', 'config', 'titleService', 'merch', 'MerchModel', function AudiencesController( $scope, config, titleService, merch, MerchModel ) {
 	titleService.setTitle('Audiences - Three Corners Collective');
 	$scope.currentUser = config.currentUser;
-
-	$scope.merch = merch;
+	$scope.merch = merch;	
     $scope.newMerch = {};
 
 	$scope.createMerch = function() {
