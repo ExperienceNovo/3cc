@@ -24,7 +24,7 @@
             <h2 style="color:white">Merch</h2>
             <div ng-repeat="item in merch" class="col-md-4">
                 <h2><a href="merch/{{item.urlTitle}}">{{item.title}} -</a></h2>
-                <p style="color:white">{{item.price}}, {{item.stock}} in stock</p>
+                <p style="color:white">${{item.price}}, {{item.stock}} in stock</p>
                 <p style="color:white">{{item.description}}</p>
                 <p style="color:white"><a href="member/{{item.user.username}}">{{item.user.username}}</a></p>
 
