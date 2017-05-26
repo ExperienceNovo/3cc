@@ -1,24 +1,63 @@
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h1 style="color:black">Venue Profile Page</h1>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
-<h2>past shows - artists who have played here in the 3cc network</h2>
+<style>
+	.avatar {
+		position:absolute;
+		top:8.4em;
+		margin: 0 auto;
+		background: #fff;
+		max-width: 15em;
+		height: 15em;
+		padding: 0.25em;
+		border-radius: .7em;
+	}
+	.member-cover{
+		max-height:17em;
+		width: 100%;
+		overflow: hidden;
+	}
+	.member-cover img{
+		width: 100%;
+		margin-top: -10%
+	}
+</style>	
+
+
+<div class="profile-header">
+	<div class="member-cover">
+		<img src="images/3ccbg.jpg"/>
+	</div>
+</div>
+<div class="container">
+	<div class="pull-left">
+		<div style="">
+			<img class="avatar" ng-src="images/bg.png"/>
+			<div class=""></div>
+		</div>
+	</div>
+</div>
+<div class="spacing-50"></div>
+<div class="container" style="text-align:left">
+	<div class="pull-left">
+		<h2>Venue</h2>
+		<h5><span class="grey">@venue-name</span></h5>
+		<h5><span class="grey">venue info</span></h5>
+	</div>
+</div>
+
+<div class="container" style="text-align:left">
+	<h2><a href="event/event">event</a></h2>
+	<h2><a href="event/event">event</a></h2>
+	<h2><a href="event/event">event</a></h2>
+	<h2><a href="event/event">event</a></h2>
+	<h2><a href="event/event">event</a></h2>
+	<h2><a href="event/event">event</a></h2>
+	
+	<h2><a href="artist/artist">artist</a></h2>
+	<h2><a href="artist/artist">artist</a></h2>
+	<h2><a href="artist/artist">artist</a></h2>
+	<h2><a href="artist/artist">artist</a></h2>
+
+	<h2>past shows - artists who have played here in the 3cc network</h2>
+	<h2>past shows - artists who have played here in the 3cc network</h2>
+</div>
+
+<div ng-include="'footer/index.tpl.html'"></div>

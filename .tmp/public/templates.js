@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/index.tpl.html', 'artist/index.tpl.html', 'artists/index.tpl.html', 'dashboard/index.tpl.html', 'footer/index.tpl.html', 'home/index.tpl.html', 'login/index.tpl.html', 'nav/index.tpl.html', 'register/index.tpl.html', 'venue/index.tpl.html', 'venues/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'artist/index.tpl.html', 'artists/index.tpl.html', 'audiences/index.tpl.html', 'dashboard/index.tpl.html', 'event/index.tpl.html', 'footer/index.tpl.html', 'home/index.tpl.html', 'login/index.tpl.html', 'nav/index.tpl.html', 'register/index.tpl.html', 'venue/index.tpl.html', 'venues/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("about/index.tpl.html",
@@ -54,6 +54,10 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function ($tem
     "                <p>Cool Kat</p>\n" +
     "            </div>\n" +
     "            <div class=\"col-md-4\">\n" +
+    "                <h3 style=\"color:black\">Maura Hartzman</h3>\n" +
+    "                <p>Cat Mom</p>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-4\">\n" +
     "                <h3 style=\"color:black\">Stephanie</h3>\n" +
     "                <p>Booking</p>\n" +
     "            </div>\n" +
@@ -71,38 +75,71 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function ($tem
 
 angular.module("artist/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("artist/index.tpl.html",
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Artist Profile Page</h1>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
-    "<h2>past shows - Show info -- venue -- transparent settlement sheet if they post. (signed artists should)</h2>\n" +
+    "<style>\n" +
+    "	.avatar {\n" +
+    "		position:absolute;\n" +
+    "		top:8.4em;\n" +
+    "		margin: 0 auto;\n" +
+    "		background: #fff;\n" +
+    "		max-width: 15em;\n" +
+    "		height: 15em;\n" +
+    "		padding: 0.25em;\n" +
+    "		border-radius: .7em;\n" +
+    "	}\n" +
+    "	.member-cover{\n" +
+    "		max-height:17em;\n" +
+    "		width: 100%;\n" +
+    "		overflow: hidden;\n" +
+    "	}\n" +
+    "	.member-cover img{\n" +
+    "		width: 100%;\n" +
+    "		margin-top: -10%\n" +
+    "	}\n" +
+    "</style>	\n" +
     "\n" +
-    "");
+    "\n" +
+    "<div class=\"profile-header\">\n" +
+    "	<div class=\"member-cover\">\n" +
+    "		<img src=\"images/3ccbg.jpg\"/>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"container\">\n" +
+    "	<div class=\"pull-left\">\n" +
+    "		<div style=\"\">\n" +
+    "			<img class=\"avatar\" ng-src=\"images/bg.png\"/>\n" +
+    "			<div class=\"\"></div>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"spacing-50\"></div>\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<div class=\"pull-left\">\n" +
+    "		<h2>Artist</h2>\n" +
+    "		<h5><span class=\"grey\">@artist-name</span></h5>\n" +
+    "		<h5><span class=\"grey\">artist info</span></h5>\n" +
+    "	</div>\n" +
+    "	<div class=\"pull-right\">\n" +
+    "		<a>facebook</a><br>\n" +
+    "		<a>twitter</a><br>\n" +
+    "		<a>google</a><br>\n" +
+    "		<a>bandcamp</a><br>\n" +
+    "		<a>soundcloud</a><br>\n" +
+    "	</div>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"venue/event\">venue</a></h2>\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"venue/event\">venue</a></h2>\n" +
+    "	<h2>settlement sheet info</h2>\n" +
+    "	<h2>settlement sheet info</h2>\n" +
+    "	<h2>settlement sheet info</h2>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "<div ng-include=\"'footer/index.tpl.html'\"></div>");
 }]);
 
 angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
@@ -134,7 +171,35 @@ angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($t
     "        <div class=\"container\">\n" +
     "            <div class=\"\">\n" +
     "                <h2><a href=\"artist/matt-phillips\">Matt Phillips</a></h2>\n" +
-    "                <p style=\"color:white\">yo</p>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</section>\n" +
+    "\n" +
+    "<div ng-include=\"'footer/index.tpl.html'\"></div>");
+}]);
+
+angular.module("audiences/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
+  $templateCache.put("audiences/index.tpl.html",
+    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
+    "  <div class=\"container\">\n" +
+    "        <div class=\"\">\n" +
+    "            <h2>Audiences</h2>\n" +
+    "            <p>Three Corners Collective</p>\n" +
+    "            <p>discover</p>\n" +
+    "        </div>\n" +
+    "</section>\n" +
+    "\n" +
+    "<section ng-show=\"currentUser\" class=\"container\">\n" +
+    "    \n" +
+    "</section>\n" +
+    "\n" +
+    "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "    <div class=\"about-section\">\n" +
+    "        <div class=\"container\">\n" +
+    "            <div class=\"\">\n" +
+    "                <h2><a href=\"artist/matt-phillips\">Discover</a></h2>\n" +
+    "                <p>merch here</p>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -145,24 +210,69 @@ angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($t
 
 angular.module("dashboard/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("dashboard/index.tpl.html",
-    "<section id=\"about\" class=\"container content-section text-center\">\n" +
+    "<section id=\"about\" class=\"container content-section\">\n" +
     "  <div class=\"container\">\n" +
-    "        <div class=\"col-lg-8 col-lg-offset-2\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
     "            <h2>Three Corners Collective</h2>\n" +
-    "            <p>Artists</p>\n" +
+    "            <p>Dashboard</p>\n" +
     "        </div>\n" +
     "</section>\n" +
+    "");
+}]);
+
+angular.module("event/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
+  $templateCache.put("event/index.tpl.html",
+    "<style>\n" +
+    "	.avatar {\n" +
+    "		position:absolute;\n" +
+    "		top:8.4em;\n" +
+    "		margin: 0 auto;\n" +
+    "		background: #fff;\n" +
+    "		max-width: 15em;\n" +
+    "		height: 15em;\n" +
+    "		padding: 0.25em;\n" +
+    "		border-radius: .7em;\n" +
+    "	}\n" +
+    "	.member-cover{\n" +
+    "		max-height:17em;\n" +
+    "		width: 100%;\n" +
+    "		overflow: hidden;\n" +
+    "	}\n" +
+    "	.member-cover img{\n" +
+    "		width: 100%;\n" +
+    "		margin-top: -10%\n" +
+    "	}\n" +
+    "</style>	\n" +
     "\n" +
-    "<section id=\"about-1\" class=\"content-section text-center\">\n" +
-    "    <div class=\"about-section\">\n" +
-    "        <div class=\"container\">\n" +
-    "            <div class=\"col-lg-8 col-lg-offset-2\">\n" +
-    "                <h2>Matt Phillips</h2>\n" +
-    "                <p style=\"color:white\">yo</p>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</section>\n" +
+    "\n" +
+    "<div class=\"profile-header\">\n" +
+    "	<div class=\"member-cover\">\n" +
+    "		<img src=\"images/3ccbg.jpg\"/>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"container\">\n" +
+    "	<div class=\"pull-left\">\n" +
+    "		<div style=\"\">\n" +
+    "			<img class=\"avatar\" ng-src=\"images/bg.png\"/>\n" +
+    "			<div class=\"\"></div>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"spacing-50\"></div>\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<h2><a href=\"venue/event\">Venue</a></h2>\n" +
+    "	<h2><a href=\"artist/event\">Artists</a></h2>\n" +
+    "	<h2><a href=\"event/event\">Audience</a></h2>\n" +
+    "	<h2><a href=\"event/event\">Content</a></h2>\n" +
+    "	<h2><a href=\"event/event\">Stats</a></h2>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "<div ng-include=\"'footer/index.tpl.html'\"></div>\n" +
     "");
 }]);
 
@@ -251,7 +361,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "            <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-4\">\n" +
-    "            <a href=\"#\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
+    "            <a href=\"/audiences\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-4\">\n" +
     "            <a href=\"/venues\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Venues</h1></a>\n" +
@@ -327,12 +437,15 @@ angular.module("nav/index.tpl.html", []).run(["$templateCache", function ($templ
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\">\n" +
     "            <ul class=\"nav navbar-nav\">\n" +
-    "                <li><a href=\"/about\">About</a></li>\n" +
+    "                <li ng-show=\"!currentUser\"><a href=\"/about\">About</a></li>\n" +
+    "                <li ng-show=\"currentUser\"><a href=\"/dashboard\">Dashboard</a></li>\n" +
     "            </ul>\n" +
     "            <ul class=\"nav navbar-nav navbar-right\">\n" +
     "                <li><a href=\"/artists\">Artists</a></li>\n" +
-    "                <li><a href=\"#\">Audiences</a></li>\n" +
+    "                <li><a href=\"/audiences\">Audiences</a></li>\n" +
     "                <li><a href=\"/venues\">Venues</a></li>\n" +
+    "                <li ng-show=\"!currentUser\" ><a href=\"/login\">Login</a></li>\n" +
+    "                <li ng-show=\"!currentUser\"><a href=\"/register\">Register</a></li>\n" +
     "            </ul>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -404,30 +517,69 @@ angular.module("register/index.tpl.html", []).run(["$templateCache", function ($
 
 angular.module("venue/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("venue/index.tpl.html",
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h1 style=\"color:black\">Venue Profile Page</h1>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
-    "<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
+    "<style>\n" +
+    "	.avatar {\n" +
+    "		position:absolute;\n" +
+    "		top:8.4em;\n" +
+    "		margin: 0 auto;\n" +
+    "		background: #fff;\n" +
+    "		max-width: 15em;\n" +
+    "		height: 15em;\n" +
+    "		padding: 0.25em;\n" +
+    "		border-radius: .7em;\n" +
+    "	}\n" +
+    "	.member-cover{\n" +
+    "		max-height:17em;\n" +
+    "		width: 100%;\n" +
+    "		overflow: hidden;\n" +
+    "	}\n" +
+    "	.member-cover img{\n" +
+    "		width: 100%;\n" +
+    "		margin-top: -10%\n" +
+    "	}\n" +
+    "</style>	\n" +
+    "\n" +
+    "\n" +
+    "<div class=\"profile-header\">\n" +
+    "	<div class=\"member-cover\">\n" +
+    "		<img src=\"images/3ccbg.jpg\"/>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"container\">\n" +
+    "	<div class=\"pull-left\">\n" +
+    "		<div style=\"\">\n" +
+    "			<img class=\"avatar\" ng-src=\"images/bg.png\"/>\n" +
+    "			<div class=\"\"></div>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"spacing-50\"></div>\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<div class=\"pull-left\">\n" +
+    "		<h2>Venue</h2>\n" +
+    "		<h5><span class=\"grey\">@venue-name</span></h5>\n" +
+    "		<h5><span class=\"grey\">venue info</span></h5>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	\n" +
+    "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
+    "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
+    "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
+    "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
+    "\n" +
+    "	<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
+    "	<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div ng-include=\"'footer/index.tpl.html'\"></div>\n" +
     "");
 }]);
 

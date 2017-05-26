@@ -15,6 +15,7 @@ angular.module( '3cc', [
     '3cc.artists',
     '3cc.audiences',
     '3cc.dashboard',
+    '3cc.event',
     '3cc.footer',
     '3cc.login',
     '3cc.nav',

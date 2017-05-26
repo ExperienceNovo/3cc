@@ -1,5 +1,6 @@
 angular.module( '3cc.nav', [
 ])
 
-.controller( 'NavCtrl', ['$scope', function FooterCtrl( $scope ) {
+.controller( 'NavCtrl', ['$scope', 'config', function FooterCtrl( $scope, config ) {
+	$scope.currentUser = config.currentUser;
 }])
