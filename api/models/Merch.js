@@ -11,6 +11,9 @@ module.exports = {
         description: {
             type: 'string',
         },
+        price: {
+            type: 'string',
+        },
         stock: {
             type: 'string',
         },

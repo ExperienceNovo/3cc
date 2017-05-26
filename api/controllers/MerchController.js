@@ -53,12 +53,14 @@ module.exports = {
 
 	create: function (req, res) {
 		var description = req.param('description');
+		var price = req.param('price');
 		var stock = req.param('stock');
 		var title = req.param('title');
 		var urlTitle = req.param('title').replace(' ','-').toLowerCase();
 		var user = req.param('user');
 		var model = {
 			description: description,
+			price: price,
 			stock: stock,
 			title: title,
 			urlTitle: urlTitle,
