@@ -18,6 +18,7 @@ angular.module( '3cc', [
     '3cc.event',
     '3cc.footer',
     '3cc.login',
+    '3cc.merch',
     '3cc.nav',
     '3cc.register',
     '3cc.venue',

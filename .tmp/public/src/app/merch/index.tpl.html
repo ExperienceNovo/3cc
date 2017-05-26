@@ -1,0 +1,53 @@
+<style>
+	.avatar {
+		position:absolute;
+		top:8.4em;
+		margin: 0 auto;
+		background: #fff;
+		max-width: 15em;
+		height: 15em;
+		padding: 0.25em;
+		border-radius: .7em;
+	}
+	.member-cover{
+		max-height:17em;
+		width: 100%;
+		overflow: hidden;
+	}
+	.member-cover img{
+		width: 100%;
+		margin-top: -10%
+	}
+</style>	
+
+
+<div class="profile-header">
+	<div class="member-cover">
+		<img src="images/3ccbg.jpg"/>
+	</div>
+</div>
+<div class="container">
+	<div class="pull-left">
+		<div style="">
+			<img class="avatar" ng-src="images/bg.png"/>
+			<div class=""></div>
+		</div>
+	</div>
+</div>
+<div class="spacing-50"></div>
+<div class="container" style="text-align:left">
+	<div class="pull-left">
+		<h2>Merch</h2>
+		<h5><span class="grey"><a href="artist/1">merch owner</a></span></h5>
+		<h5><span class="grey"></span>88 in stock</h5>
+	</div>
+</div>
+
+<div class="container" style="text-align:left">
+	<p>merch description merch description merch description merch description merch description merch description merch description merch description </p>
+
+	<button style="width:100%" ng-click="purchase()" type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i> purchase</button>
+
+</div>
+
+<div ng-include="'footer/index.tpl.html'"></div>

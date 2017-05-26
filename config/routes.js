@@ -14,6 +14,8 @@ module.exports.routes = {
   'get /dashboard': 'HomeController.index',
   'get /events': 'HomeController.index',
   'get /event/:path': 'HomeController.index',
+  'get /merch': 'HomeController.index',
+  'get /merch/:path': 'HomeController.index',
   'get /venues': 'HomeController.index',
   'get /venue/:path': 'HomeController.index',
 
@@ -31,6 +33,16 @@ module.exports.routes = {
   'post /api/entry/update': 'EntryController.update',
   'post /api/entry': 'EntryController.create',
   'get /api/entry/:id': 'EntryController.getOne',
+
+  /**
+   * Merch routes
+   */
+  'get /api/merch': 'MerchController.getSome',
+  'post /api/merch/update': 'MerchController.update',
+  'post /api/merch': 'MerchController.create',
+  'get /api/merch/:id': 'MerchController.getOne',
+  'get /api/merch/url/:path': 'CommitteeController.getByUrl',
+
 
   /**
    * User routes

@@ -1,4 +1,4 @@
-<section id="about" class="container content-section">
+<section id="about" class="container content-section" style="text-align:left">
   <div class="container">
         <div class="col-lg-12">
             <h2>Three Corners Collective</h2>
@@ -6,11 +6,71 @@
         </div>
     </div>
 </section>
-<section id="about" class="container content-section">
+<section id="about" class="container content-section" style="text-align:left">
   <div class="container">
         <div class="col-lg-12">
-            <h2>credibility (settlement sheet - CPA financial ish) - $8.88</h2>
+            <h2>artist</h2>
+            <h2>credibility (settlement sheet - CPA) - $8.88</h2>
             <h2>growth - $88.88</h2>
+            <div class="spacing-50"></div>
+
+
+
+
+            
+        </div>
+        <div class="col-lg-12">
+            <h2>admin</h2>
+            <h2>create merch</h2>
+            <form role="form">
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newMerch.title" type="text" placeholder= "merch title"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newMerch.stock" type="text" placeholder= "merch stock"></div>
+                <br><br>
+                <textarea style="width:100%;height:250px" ng-model="newMerch.description" type="text" placeholder= "merch description"></textarea>
+                <br><br>
+                <button style="width:100%" ng-click="createMerch()" type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i> Submit</button>
+            </form>
+            <div class="spacing-50"></div>
+
+            <h2>create venue</h2>
+            <form role="form">
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newVenue.title" type="text" placeholder= "venue title"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newVenue.address" type="text" placeholder= "venue address"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newVenue.facebook" type="text" placeholder= "venue facebook"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newVenue.twitter" type="text" placeholder= "venue twitter"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newVenue.google" type="text" placeholder= "venue google"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newVenue.booking" type="text" placeholder= "venue booking"></div>
+                <br><br>
+                <textarea style="width:100%;height:250px" ng-model="newVenue.description" type="text" placeholder= "venue description"></textarea>
+                <br><br>
+                <button style="width:100%" ng-click="createVenue()" type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i> Submit</button>
+            </form>
+            <div class="spacing-50"></div>
+
+            <h2>create event</h2>
+            <form role="form">
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newEvent.title" type="text" placeholder= "event title"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newEvent.artists" type="text" placeholder= "event artists"></div>
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newEvent.venue" type="text" placeholder= "event venue"></div>
+                <br><br>
+                <textarea style="width:100%;height:250px" ng-model="newEvent.description" type="text" placeholder= "event description"></textarea>
+                <br><br>
+                <button style="width:100%" ng-click="createEvent()" type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i> Submit</button>
+            </form>
+            <div class="spacing-50"></div>
+
+            <h2>create artist</h2>
+            <form role="form">
+                <div class="form-group"><input class="col-md-12 form-control" ng-model="newArtist.title" type="text" placeholder= "artist title"></div>
+                <br><br>
+                <textarea style="width:100%;height:250px" ng-model="newArtist.description" type="text" placeholder= "artist description"></textarea>
+                <br><br>
+                <button style="width:100%" ng-click="createArtist()" type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i> Submit</button>
+            </form>
+            <div class="spacing-50"></div>
+
         </div>
     </div>
 </section>
+
+<div ng-include="'footer/index.tpl.html'"></div>

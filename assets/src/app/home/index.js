@@ -13,7 +13,7 @@ angular.module( '3cc.home', [
 	});
 }])
 
-.controller( 'HomeCtrl', [ '$scope', 'titleService', function HomeController( $scope, titleService ) {
+.controller( 'HomeCtrl', [ '$location', '$scope', 'config', 'titleService', function HomeController( $location, $scope, config, titleService ) {
 	titleService.setTitle('Three Corners Collective');
-	$scope.date = new Date();
+	$scope.currentUser = config.currentUser;
 }]);

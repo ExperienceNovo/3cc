@@ -31,5 +31,4 @@ angular.module( '3cc.venues', [
         });
     };
 
-	$scope.date = new Date();
 }]);

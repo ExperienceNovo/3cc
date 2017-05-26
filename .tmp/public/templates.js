@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/index.tpl.html', 'artist/index.tpl.html', 'artists/index.tpl.html', 'audiences/index.tpl.html', 'dashboard/index.tpl.html', 'event/index.tpl.html', 'footer/index.tpl.html', 'home/index.tpl.html', 'login/index.tpl.html', 'nav/index.tpl.html', 'register/index.tpl.html', 'venue/index.tpl.html', 'venues/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'artist/index.tpl.html', 'artists/index.tpl.html', 'audiences/index.tpl.html', 'dashboard/index.tpl.html', 'event/index.tpl.html', 'footer/index.tpl.html', 'home/index.tpl.html', 'login/index.tpl.html', 'merch/index.tpl.html', 'nav/index.tpl.html', 'register/index.tpl.html', 'venue/index.tpl.html', 'venues/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("about/index.tpl.html",
@@ -191,15 +191,25 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "</section>\n" +
     "\n" +
     "<section ng-show=\"currentUser\" class=\"container\">\n" +
-    "    \n" +
+    "    <form role=\"form\">\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.title\" type=\"text\" placeholder= \"merch title\"></div>\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.stock\" type=\"text\" placeholder= \"merch stock\"></div>\n" +
+    "        <br><br>\n" +
+    "        <textarea style=\"width:100%;height:250px\" ng-model=\"newMerch.description\" type=\"text\" placeholder= \"merch description\"></textarea>\n" +
+    "        <br><br>\n" +
+    "        <button style=\"width:100%\" ng-click=\"createMerch()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
+    "    </form>\n" +
     "</section>\n" +
     "\n" +
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <div class=\"\">\n" +
-    "                <h2><a href=\"artist/matt-phillips\">Discover</a></h2>\n" +
-    "                <p>merch here</p>\n" +
+    "            <div ng-repeat=\"item in merch\" class=\"col-md-4\">\n" +
+    "                <h2><a href=\"merch/{{item.urlTitle}}\">{{item.title}}</a></h2>\n" +
+    "                <p style=\"color:white\">{{item.stock}}</p>\n" +
+    "                <p style=\"color:white\">{{item.description}}</p>\n" +
+    "                <p style=\"color:white\"><a href=\"member/{{item.user.username}}\">{{item.user.username}}</a></p>\n" +
+    "\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -210,13 +220,82 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
 
 angular.module("dashboard/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("dashboard/index.tpl.html",
-    "<section id=\"about\" class=\"container content-section\">\n" +
+    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
     "  <div class=\"container\">\n" +
     "        <div class=\"col-lg-12\">\n" +
     "            <h2>Three Corners Collective</h2>\n" +
     "            <p>Dashboard</p>\n" +
     "        </div>\n" +
+    "    </div>\n" +
     "</section>\n" +
+    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
+    "  <div class=\"container\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>artist</h2>\n" +
+    "            <h2>credibility (settlement sheet - CPA) - $8.88</h2>\n" +
+    "            <h2>growth - $88.88</h2>\n" +
+    "            <div class=\"spacing-50\"></div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "            \n" +
+    "        </div>\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>admin</h2>\n" +
+    "            <h2>create merch</h2>\n" +
+    "            <form role=\"form\">\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.title\" type=\"text\" placeholder= \"merch title\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newMerch.stock\" type=\"text\" placeholder= \"merch stock\"></div>\n" +
+    "                <br><br>\n" +
+    "                <textarea style=\"width:100%;height:250px\" ng-model=\"newMerch.description\" type=\"text\" placeholder= \"merch description\"></textarea>\n" +
+    "                <br><br>\n" +
+    "                <button style=\"width:100%\" ng-click=\"createMerch()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
+    "            </form>\n" +
+    "            <div class=\"spacing-50\"></div>\n" +
+    "\n" +
+    "            <h2>create venue</h2>\n" +
+    "            <form role=\"form\">\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.title\" type=\"text\" placeholder= \"venue title\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.address\" type=\"text\" placeholder= \"venue address\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.facebook\" type=\"text\" placeholder= \"venue facebook\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.twitter\" type=\"text\" placeholder= \"venue twitter\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.google\" type=\"text\" placeholder= \"venue google\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.booking\" type=\"text\" placeholder= \"venue booking\"></div>\n" +
+    "                <br><br>\n" +
+    "                <textarea style=\"width:100%;height:250px\" ng-model=\"newVenue.description\" type=\"text\" placeholder= \"venue description\"></textarea>\n" +
+    "                <br><br>\n" +
+    "                <button style=\"width:100%\" ng-click=\"createVenue()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
+    "            </form>\n" +
+    "            <div class=\"spacing-50\"></div>\n" +
+    "\n" +
+    "            <h2>create event</h2>\n" +
+    "            <form role=\"form\">\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newEvent.title\" type=\"text\" placeholder= \"event title\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newEvent.artists\" type=\"text\" placeholder= \"event artists\"></div>\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newEvent.venue\" type=\"text\" placeholder= \"event venue\"></div>\n" +
+    "                <br><br>\n" +
+    "                <textarea style=\"width:100%;height:250px\" ng-model=\"newEvent.description\" type=\"text\" placeholder= \"event description\"></textarea>\n" +
+    "                <br><br>\n" +
+    "                <button style=\"width:100%\" ng-click=\"createEvent()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
+    "            </form>\n" +
+    "            <div class=\"spacing-50\"></div>\n" +
+    "\n" +
+    "            <h2>create artist</h2>\n" +
+    "            <form role=\"form\">\n" +
+    "                <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newArtist.title\" type=\"text\" placeholder= \"artist title\"></div>\n" +
+    "                <br><br>\n" +
+    "                <textarea style=\"width:100%;height:250px\" ng-model=\"newArtist.description\" type=\"text\" placeholder= \"artist description\"></textarea>\n" +
+    "                <br><br>\n" +
+    "                <button style=\"width:100%\" ng-click=\"createArtist()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
+    "            </form>\n" +
+    "            <div class=\"spacing-50\"></div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</section>\n" +
+    "\n" +
+    "<div ng-include=\"'footer/index.tpl.html'\"></div>\n" +
     "");
 }]);
 
@@ -278,7 +357,7 @@ angular.module("event/index.tpl.html", []).run(["$templateCache", function ($tem
 
 angular.module("footer/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("footer/index.tpl.html",
-    "<section id=\"about-2\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "<section id=\"about-2\" class=\"content-section\" style=\"text-align:left\" ng-controller=\"FooterCtrl\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
     "            <div class=\"\">\n" +
@@ -369,6 +448,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "    </div>\n" +
     "    <div class=\"spacing-50\"></div>\n" +
     "</section>\n" +
+    "\n" +
     "<div ng-include=\"'footer/index.tpl.html'\"></div>");
 }]);
 
@@ -420,6 +500,63 @@ angular.module("login/index.tpl.html", []).run(["$templateCache", function ($tem
     "        </div>\n" +
     "    </div>\n" +
     "</div>");
+}]);
+
+angular.module("merch/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
+  $templateCache.put("merch/index.tpl.html",
+    "<style>\n" +
+    "	.avatar {\n" +
+    "		position:absolute;\n" +
+    "		top:8.4em;\n" +
+    "		margin: 0 auto;\n" +
+    "		background: #fff;\n" +
+    "		max-width: 15em;\n" +
+    "		height: 15em;\n" +
+    "		padding: 0.25em;\n" +
+    "		border-radius: .7em;\n" +
+    "	}\n" +
+    "	.member-cover{\n" +
+    "		max-height:17em;\n" +
+    "		width: 100%;\n" +
+    "		overflow: hidden;\n" +
+    "	}\n" +
+    "	.member-cover img{\n" +
+    "		width: 100%;\n" +
+    "		margin-top: -10%\n" +
+    "	}\n" +
+    "</style>	\n" +
+    "\n" +
+    "\n" +
+    "<div class=\"profile-header\">\n" +
+    "	<div class=\"member-cover\">\n" +
+    "		<img src=\"images/3ccbg.jpg\"/>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"container\">\n" +
+    "	<div class=\"pull-left\">\n" +
+    "		<div style=\"\">\n" +
+    "			<img class=\"avatar\" ng-src=\"images/bg.png\"/>\n" +
+    "			<div class=\"\"></div>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "<div class=\"spacing-50\"></div>\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<div class=\"pull-left\">\n" +
+    "		<h2>Merch</h2>\n" +
+    "		<h5><span class=\"grey\"><a href=\"artist/1\">merch owner</a></span></h5>\n" +
+    "		<h5><span class=\"grey\"></span>88 in stock</h5>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<p>merch description merch description merch description merch description merch description merch description merch description merch description </p>\n" +
+    "\n" +
+    "	<button style=\"width:100%\" ng-click=\"purchase()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> purchase</button>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "<div ng-include=\"'footer/index.tpl.html'\"></div>");
 }]);
 
 angular.module("nav/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
@@ -594,19 +731,25 @@ angular.module("venues/index.tpl.html", []).run(["$templateCache", function ($te
     "    </div>\n" +
     "</section>\n" +
     "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
     "<section ng-show=\"currentUser\" class=\"container\">\n" +
+    "\n" +
     "    <form role=\"form\">\n" +
-    "        <input class=\"col-md-12\" ng-model=\"newVenue.title\" type=\"text\" placeholder= \"venue title\">\n" +
-    "        <input class=\"col-md-12\" ng-model=\"newVenue.address\" type=\"text\" placeholder= \"venue address\">\n" +
-    "        <input class=\"col-md-12\" ng-model=\"newVenue.facebook\" type=\"text\" placeholder= \"venue facebook\">\n" +
-    "        <input class=\"col-md-12\" ng-model=\"newVenue.twitter\" type=\"text\" placeholder= \"venue twitter\">\n" +
-    "        <input class=\"col-md-12\" ng-model=\"newVenue.google\" type=\"text\" placeholder= \"venue google\">\n" +
-    "        <input class=\"col-md-12\" ng-model=\"newVenue.booking\" type=\"text\" placeholder= \"venue booking\">\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.title\" type=\"text\" placeholder= \"venue title\"></div>\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.address\" type=\"text\" placeholder= \"venue address\"></div>\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.facebook\" type=\"text\" placeholder= \"venue facebook\"></div>\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.twitter\" type=\"text\" placeholder= \"venue twitter\"></div>\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.google\" type=\"text\" placeholder= \"venue google\"></div>\n" +
+    "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.booking\" type=\"text\" placeholder= \"venue booking\"></div>\n" +
     "        <br><br>\n" +
     "        <textarea style=\"width:100%;height:250px\" ng-model=\"newVenue.description\" type=\"text\" placeholder= \"venue description\"></textarea>\n" +
     "        <br><br>\n" +
-    "        <button ng-click=\"createVenue()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
+    "        <button style=\"width:100%\" ng-click=\"createVenue()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
     "    </form>\n" +
+    "    \n" +
     "</section>\n" +
     "\n" +
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +

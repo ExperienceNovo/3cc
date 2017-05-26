@@ -9,10 +9,28 @@ angular.module( '3cc.audiences', [
 				controller: 'AudiencesCtrl',
 				templateUrl: 'audiences/index.tpl.html'
 			}
-		}
+		},
+		resolve: {
+            merch: ['MerchModel', function(MerchModel) {
+				return MerchModel.getSome(100,0, 'createdAt DESC');
+            }]
+        }
 	});
 }])
 
-.controller( 'AudiencesCtrl', [ '$scope', 'titleService', function AudiencesController( $scope, titleService ) {
+.controller( 'AudiencesCtrl', [ '$scope', 'config', 'titleService', 'merch', 'MerchModel', function AudiencesController( $scope, config, titleService, merch, MerchModel ) {
 	titleService.setTitle('Audiences - Three Corners Collective');
+	$scope.currentUser = config.currentUser;
+
+	$scope.merch = merch;
+    $scope.newMerch = {};
+
+	$scope.createMerch = function() {
+        $scope.newMerch.user = config.currentUser.id;
+        MerchModel.create($scope.newMerch).then(function(model) {
+            $scope.newMerch = {};
+        });
+    };
+
+
 }]);

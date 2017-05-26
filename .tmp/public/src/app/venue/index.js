@@ -15,5 +15,4 @@ angular.module( '3cc.venue', [
 
 .controller( 'VenueCtrl', [ '$scope', 'titleService', function VenueController( $scope, titleService ) {
 	titleService.setTitle('Venue - Three Corners Collective');
-	$scope.date = new Date();
 }]);
