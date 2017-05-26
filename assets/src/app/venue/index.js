@@ -21,6 +21,5 @@ angular.module( '3cc.venue', [
 
 .controller( 'VenueCtrl', [ '$scope', 'titleService', 'venue', function VenueController( $scope, titleService, venue ) {
 	$scope.venue = venue[0];
-	console.log(venue)
-	titleService.setTitle('Venue - Three Corners Collective');
+	titleService.setTitle($scope.venue.title + ' - Three Corners Collective');
 }]);
