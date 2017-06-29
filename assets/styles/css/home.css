@@ -87,7 +87,7 @@ p {
 }
 
 a {
-    color: #e54141;
+    color: #e56a6a;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -226,14 +226,14 @@ a:hover,a:focus {
 }
 
 .btn-default {
-    border: 1px solid #e54141;
-    color: #e54141;
+    border: 1px solid #e56a6a;
+    color: #e56a6a;
     background-color: transparent;
 }
 
 .btn-default:hover,.btn-default:focus {
-    border: 1px solid #e54141;
+    border: 1px solid #e56a6a;
     outline: none;
     color: #000;
-    background-color: #e54141;
+    background-color: #e56a6a;
 }
