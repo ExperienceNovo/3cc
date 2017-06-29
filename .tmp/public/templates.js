@@ -13,7 +13,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function ($tem
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <h2>Three Corners Collective</h2>\n" +
+    "            <h2>About</h2>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +
@@ -130,10 +130,7 @@ angular.module("artist/index.tpl.html", []).run(["$templateCache", function ($te
     "\n" +
     "<div class=\"container\" style=\"text-align:left\">\n" +
     "	<h2><a href=\"event/event\">event</a></h2>\n" +
-    "	<h2><a href=\"venue/event\">venue</a></h2>\n" +
-    "	<h2><a href=\"event/event\">event</a></h2>\n" +
-    "	<h2><a href=\"venue/event\">venue</a></h2>\n" +
-    "	<h2>settlement sheet info</h2>\n" +
+    "	<h2><a href=\"venue/test-venue\">venue</a></h2>\n" +
     "	<h2>settlement sheet info</h2>\n" +
     "	<h2>settlement sheet info</h2>\n" +
     "\n" +
@@ -148,7 +145,9 @@ angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($t
     "  <div class=\"container\">\n" +
     "        <div class=\"\">\n" +
     "            <h2>Artists</h2>\n" +
-    "            <p>Three Corners Collective</p>\n" +
+    "            <p>three corners collective</p>\n" +
+    "            <p>Jane S Brown</p>\n" +
+    "\n" +
     "        </div>\n" +
     "</section>\n" +
     "\n" +
@@ -206,7 +205,10 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "        <div class=\"container\">\n" +
     "            <h2 style=\"color:white\">Merch</h2>\n" +
     "            <div ng-repeat=\"item in merch\" class=\"col-md-4\">\n" +
-    "                <h2><a href=\"merch/{{item.urlTitle}}\">{{item.title}}</a></h2>\n" +
+    "                <a href=\"merch/{{item.urlTitle}}\">\n" +
+    "                    <img src=\"{{item.imageUrl}}\" style=\"height:88px\">\n" +
+    "                    <h2>{{item.title}}</h2>\n" +
+    "                </a>\n" +
     "                <p style=\"color:white\">${{item.price}}, {{item.stock}} in stock</p>\n" +
     "                <p style=\"color:white\">{{item.description}}</p>\n" +
     "                <p style=\"color:white\"><a href=\"member/{{item.user.username}}\">{{item.user.username}}</a></p>\n" +
@@ -361,9 +363,9 @@ angular.module("footer/index.tpl.html", []).run(["$templateCache", function ($te
   $templateCache.put("footer/index.tpl.html",
     "<section id=\"about-2\" class=\"content-section\" style=\"text-align:left\" ng-controller=\"FooterCtrl\">\n" +
     "    <div class=\"about-section\">\n" +
-    "        <div class=\"container\">\n" +
+    "        <div class=\"container\" style=\"font-family:Oswald\">\n" +
     "			<div class=\"col-xs-10\">\n" +
-    "                <h4>{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:50px\" src=\"images/clear_logo.png\"> Three Corners Collective</a></h4>\n" +
+    "                <h4>{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:50px\" src=\"images/clear_logo.png\"> three corners collective</a></h4>\n" +
     "            </div>\n" +
     "             <div class=\"col-xs-2\">\n" +
     "                <h4 style=\"margin-top:10px\">\n" +
@@ -385,9 +387,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "        <div class=\"container\">\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-md-8 col-md-offset-2\">\n" +
-    "                    <img class=\"intro-img\" src=\"images/logo.png\">\n" +
+    "                    <img class=\"intro-img\" src=\"images/triangle3cc.png\">\n" +
     "                    <div class=\"spacing-15\"></div>\n" +
-    "                    <p class=\"intro-text\">Three Corners Collective</p>\n" +
+    "                    <!--<p class=\"intro-text\">Three Corners Collective</p>-->\n" +
     "                    <!--play video-->\n" +
     "                    <a href=\"#about\" class=\"btn btn-circle page-scroll\" du-smooth-scroll>\n" +
     "                        <i class=\"fa fa-angle-double-down animated\"></i>\n" +
@@ -398,14 +400,8 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "    </div>\n" +
     "</header>\n" +
     "\n" +
-    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
+    "<section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
     "  <div class=\"container\">\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-lg-8 col-lg-offset-2\">\n" +
-    "                <h2></h2>\n" +
-    "                <p></p>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
     "        <div class=\"col-md-12\">\n" +
     "            <h1 style=\"color:black\">Artists</h1>\n" +
     "            <p></p>\n" +
@@ -427,24 +423,26 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <div class=\"\">\n" +
-    "                <h2><a href=\"register\">Sign with us</a></h2>\n" +
+    "            <div class=\"col-md-12\">\n" +
+    "                <h2><a href=\"register\">Work with us</a></h2>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +
     "\n" +
-    "<section id=\"contact\" class=\"container content-section\" style=\"text-align:left\">\n" +
-    "    <div class=\"col-md-4\">\n" +
-    "        <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
+    "<section id=\"contact\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "    <div class=\"container\">\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <a href=\"/audiences\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <a href=\"/venues\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Venues</h1></a>\n" +
+    "        </div>\n" +
+    "        <div class=\"spacing-50\"></div>\n" +
     "    </div>\n" +
-    "    <div class=\"col-md-4\">\n" +
-    "        <a href=\"/audiences\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-md-4\">\n" +
-    "        <a href=\"/venues\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Venues</h1></a>\n" +
-    "    </div>\n" +
-    "    <div class=\"spacing-50\"></div>\n" +
     "</section>\n" +
     "\n" +
     "<div ng-include=\"'footer/index.tpl.html'\"></div>");
@@ -533,7 +531,7 @@ angular.module("merch/index.tpl.html", []).run(["$templateCache", function ($tem
     "<div class=\"container\">\n" +
     "	<div class=\"pull-left\">\n" +
     "		<div style=\"\">\n" +
-    "			<img class=\"avatar\" ng-src=\"images/bg.png\"/>\n" +
+    "			<img class=\"avatar\" ng-src=\"{{merch.imageUrl}}\"/>\n" +
     "			<div class=\"\"></div>\n" +
     "		</div>\n" +
     "	</div>\n" +
@@ -549,7 +547,7 @@ angular.module("merch/index.tpl.html", []).run(["$templateCache", function ($tem
     "</div>\n" +
     "\n" +
     "<div class=\"container\" style=\"text-align:left\">\n" +
-    "	<p>merch description merch description merch description merch description merch description merch description merch description merch description </p>\n" +
+    "	<p>{{merch.description}}</p>\n" +
     "\n" +
     "	<button style=\"width:100%\" ng-click=\"purchase()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> purchase</button>\n" +
     "\n" +
@@ -569,19 +567,19 @@ angular.module("nav/index.tpl.html", []).run(["$templateCache", function ($templ
     "                <span class=\"icon-bar\" style=\"background-color:black\"></span>\n" +
     "                <span class=\"icon-bar\" style=\"background-color:black\"></span>\n" +
     "            </button>\n" +
-    "            <a class=\"navbar-brand\" href=\"/\">Three Corners Collective</a>\n" +
+    "            <a style=\"font-family:Oswald\" class=\"navbar-brand\" href=\"/\">three corners collective</a>\n" +
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\">\n" +
     "            <ul class=\"nav navbar-nav\">\n" +
-    "                <li ng-show=\"!currentUser\"><a href=\"/about\">About</a></li>\n" +
-    "                <li ng-show=\"currentUser\"><a href=\"/dashboard\">Dashboard</a></li>\n" +
+    "                <li ng-show=\"!currentUser\"><a href=\"/about\">about</a></li>\n" +
+    "                <li ng-show=\"currentUser\"><a href=\"/dashboard\">dashboard</a></li>\n" +
     "            </ul>\n" +
     "            <ul class=\"nav navbar-nav navbar-right\">\n" +
-    "                <li><a href=\"/artists\">Artists</a></li>\n" +
-    "                <li><a href=\"/audiences\">Audiences</a></li>\n" +
-    "                <li><a href=\"/venues\">Venues</a></li>\n" +
-    "                <li ng-show=\"!currentUser\" ><a href=\"/login\">Login</a></li>\n" +
-    "                <li ng-show=\"!currentUser\"><a href=\"/register\">Register</a></li>\n" +
+    "                <li><a href=\"/artists\">artists</a></li>\n" +
+    "                <li><a href=\"/audiences\">audiences</a></li>\n" +
+    "                <li><a href=\"/venues\">venues</a></li>\n" +
+    "                <li ng-show=\"!currentUser\" ><a href=\"/login\">login</a></li>\n" +
+    "                <li ng-show=\"!currentUser\"><a href=\"/register\">register</a></li>\n" +
     "            </ul>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -726,7 +724,9 @@ angular.module("venues/index.tpl.html", []).run(["$templateCache", function ($te
     "  <div class=\"container\">\n" +
     "        <div class=\"\">\n" +
     "            <h2>Venues</h2>\n" +
-    "            <p>Three Corners Collective</p>\n" +
+    "\n" +
+    "            <h1>are you a venue</h1>\n" +
+    "\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +

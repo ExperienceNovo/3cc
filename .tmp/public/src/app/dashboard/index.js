@@ -21,7 +21,7 @@ angular.module( '3cc.dashboard', [
 	});
 }])
 
-.controller( 'DashboardCtrl', [ '$scope', 'titleService', 'merch', 'MerchModel', 'venues', 'VenueModel', function DashboardController( $scope, titleService, merch, MerchModel, venues, VenueModel ) {
+.controller( 'DashboardCtrl', [ '$scope', 'config', 'titleService', 'merch', 'MerchModel', 'venues', 'VenueModel', function DashboardController( $scope, config, titleService, merch, MerchModel, venues, VenueModel ) {
 	titleService.setTitle('Dashboard - Three Corners Collective');
 
 	$scope.merch = merch;

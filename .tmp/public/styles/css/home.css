@@ -87,7 +87,7 @@ p {
 }
 
 a {
-    color: #42DCA3;
+    color: #e56a6a;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -204,16 +204,20 @@ a:hover,a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background-color: #1275b8;
+    background-color: #28729e;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    //#e56a6a
+    //#e54141
+    //#125896
+    //#28729e
 }
 
 .btn {
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Oswald
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -222,14 +226,14 @@ a:hover,a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42DCA3;
-    color: #42DCA3;
+    border: 1px solid #e56a6a;
+    color: #e56a6a;
     background-color: transparent;
 }
 
 .btn-default:hover,.btn-default:focus {
-    border: 1px solid #42DCA3;
+    border: 1px solid #e56a6a;
     outline: none;
     color: #000;
-    background-color: #42DCA3;
+    background-color: #e56a6a;
 }
