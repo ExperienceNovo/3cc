@@ -19,7 +19,7 @@ angular.module( '3cc.merch', [
 }])
 
 .controller( 'MerchCtrl', [ '$scope', 'titleService', 'merch', function MerchController( $scope, titleService, merch ) {
-	titleService.setTitle('Artist - Three Corners Collective');
 	$scope.merch = merch[0];
+	titleService.setTitle($scope.merch.title + ' - Three Corners Collective');
 	console.log(merch);
 }]);

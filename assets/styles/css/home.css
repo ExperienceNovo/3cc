@@ -87,7 +87,7 @@ p {
 }
 
 a {
-    color: #42DCA3;
+    color: #e54141;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -200,11 +200,17 @@ a:hover,a:focus {
     padding-top: 100px;
 }
 
+
+//#e56a6a
+//#e54141
+//#125896
+//#28729e
+
 .about-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background-color: #1275b8;
+    background-color: #28729e;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -222,14 +228,14 @@ a:hover,a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42DCA3;
-    color: #42DCA3;
+    border: 1px solid #e54141;
+    color: #e54141;
     background-color: transparent;
 }
 
 .btn-default:hover,.btn-default:focus {
-    border: 1px solid #42DCA3;
+    border: 1px solid #e54141;
     outline: none;
     color: #000;
-    background-color: #42DCA3;
+    background-color: #e54141;
 }
