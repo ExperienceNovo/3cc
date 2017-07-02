@@ -20,7 +20,7 @@ module.exports = {
         },
         avatarUrl: {
             type: 'string',
-            defaultsTo: 'images/bg.png'
+            defaultsTo: 'images/triangle3cc.png'
         },
         coverUrl: {
             type: 'string',
