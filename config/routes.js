@@ -60,4 +60,6 @@ module.exports.routes = {
   'post /api/venue': 'VenueController.create',
   'get /api/venue/:id': 'VenueController.getOne',
 
+  '/.well-known/acme-challenge/qUwYNX1tY-lzRn20QyUxuwwmo0QPyw7wQxdnaD6e1XA': 'HomeController.ssl',
+
 };
