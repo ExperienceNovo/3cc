@@ -7,7 +7,7 @@ module.exports = {
     },
 
     ssl: function(req, res) {
-        res.send('qUwYNX1tY-lzRn20QyUxuwwmo0QPyw7wQxdnaD6e1XA.yMz-EAV5agQah1zn-w6Aqp0JVzxv1jmSFH6dh5Ea9uI')
+        res.send('9L7t4I1ujmSxWf1WzhSQZFeSHaZreeEihZoMLK7gqQs.yMz-EAV5agQah1zn-w6Aqp0JVzxv1jmSFH6dh5Ea9uI')
     }
     
 };
