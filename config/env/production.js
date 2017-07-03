@@ -13,8 +13,11 @@
 module.exports = {
 
   hookTimeout: 10000000,
-  policies: {
-    '*': ['enforceSsl', 'passport']
-  },
+  //policies: {
+    //'*': ['enforceSsl', 'passport']
+  //},
+  //sudo heroku certs:add /etc/letsencrypt/live/www.threecornerscollective.com/fullchain.pem /etc/letsencrypt/live/www.threecornerscollective.com/privkey.pem
+
+
 
 };
