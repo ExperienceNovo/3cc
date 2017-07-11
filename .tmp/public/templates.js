@@ -391,7 +391,7 @@ angular.module("footer/index.tpl.html", []).run(["$templateCache", function ($te
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\" style=\"font-family:Oswald\">\n" +
     "			<div class=\"col-xs-10\">\n" +
-    "                <h4>{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:50px\" src=\"images/threecorners3.png\"> three corners collective</a></h4>\n" +
+    "                <h4 style=\"font-size:20px\">{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:40px;padding-left:5px;padding-right:5px;\" src=\"images/icon-1.png\"> three corners collective</a></h4>\n" +
     "            </div>\n" +
     "             <div class=\"col-xs-2\">\n" +
     "                <h4 style=\"margin-top:10px\">\n" +
@@ -593,8 +593,10 @@ angular.module("nav/index.tpl.html", []).run(["$templateCache", function ($templ
     "                <span class=\"icon-bar\" style=\"background-color:black\"></span>\n" +
     "                <span class=\"icon-bar\" style=\"background-color:black\"></span>\n" +
     "            </button>\n" +
-    "            <!--<img style=\"width:50px;float:left\" src=\"images/triangle3cc.png\"/>-->\n" +
-    "            <a style=\"font-family:Oswald\" class=\"navbar-brand\" href=\"/\">three corners collective</a>\n" +
+    "            <a style=\"font-family:Oswald\" class=\"navbar-brand\" href=\"/\">\n" +
+    "                <img style=\"width:45px;float:left;margin-top:-11px\" src=\"images/threecorners3.png\"/>\n" +
+    "                <!--three corners collective-->\n" +
+    "            </a>\n" +
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\">\n" +
     "            <ul class=\"nav navbar-nav\">\n" +
