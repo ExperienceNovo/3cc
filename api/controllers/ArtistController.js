@@ -44,10 +44,22 @@ module.exports = {
 			description: req.param('description'),
 			socialAccounts: req.param('socialAccounts'),
 		};
-		Venue.create(model)
+		Artist.create(model)
 		.exec(function(err, venue) {
 			if (err) {return console.log(err);}
-			else {Venue.publishCreate(venue);}
+			else {
+				Venue.publishCreate(venue);
+				var userArray = req.param('userArray').split(',')
+				for (x in userArray){
+					var artistUserModel = {
+						artist: venue.id,
+						user: userArray[x],
+					}
+					ArtistUser.create(artistUserModel).then(function(model){
+						ArtistUser.publishCreate(model);
+					});
+				}
+			}
 		});
 	},
 
@@ -58,7 +70,7 @@ module.exports = {
 		if (req.param('isApproved')){
 			model.isApproved = true
 		}
-		Venue.update({id: req.param('id')}, model)
+		Artist.update({id: req.param('id')}, model)
 		.then(function(result){
 			return res.json(result);
 		})

@@ -48,5 +48,7 @@ module.exports = {
 				res.json(model);
 			}
 		});
+		//create ArtistUser ~> if request for info --> (Y)
+
 	}
 };

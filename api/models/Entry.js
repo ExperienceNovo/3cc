@@ -8,16 +8,19 @@
 module.exports = {
 
 	attributes: {
-        name: {
+        artist: {
             type: 'string',
         },
-        email: {
+        venue: {
             type: 'string',
         },
-        type: {
+        eventModel: {
             type: 'string',
             required: true
-        }
+        },
+        settlementJson:{
+             type: 'json',
+        },
     },
 
     getAll: function() {

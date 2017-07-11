@@ -21,6 +21,7 @@ angular.module( '3cc.audiences', [
 .controller( 'AudiencesCtrl', [ '$scope', 'config', 'titleService', 'merch', 'MerchModel', function AudiencesController( $scope, config, titleService, merch, MerchModel ) {
 	titleService.setTitle('Audiences - Three Corners Collective');
 	$scope.currentUser = config.currentUser;
+	$scope.events = ['3CC Features', 'Emo Night', '1234']
 	$scope.merch = merch;	
     $scope.newMerch = {};
 

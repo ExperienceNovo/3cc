@@ -9,11 +9,17 @@ angular.module( '3cc.artists', [
 				controller: 'ArtistsCtrl',
 				templateUrl: 'artists/index.tpl.html'
 			}
-		}
+		},
+		resolve: {
+            artists: ['ArtistModel', function(ArtistModel) {
+				//return ArtistModel.getSome(100, 0, 'createdAt DESC', {});
+				return null;
+            }]
+        }
 	});
 }])
 
-.controller( 'ArtistsCtrl', [ '$scope', 'titleService', function ArtistsController( $scope, titleService ) {
+.controller( 'ArtistsCtrl', [ '$scope', 'artists', 'titleService', function ArtistsController( $scope, artists, titleService ) {
 	titleService.setTitle('Artists - Three Corners Collective');
-	$scope.date = new Date();
+	$scope.artists = ['matt phillips', 'Drug Store Ghost', 'Age of Sages', 'Biscuits & Groovy', 'the oblations', 'These Weak Lips', 'ty lake', 'Dan Page', 'Jess M']
 }]);

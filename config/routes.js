@@ -27,6 +27,15 @@ module.exports.routes = {
   'post /auth/local/:action': 'AuthController.callback',
 
   /**
+   * Artist routes
+   */
+  'get /api/artist': 'ArtistController.getSome',
+  'post /api/artist/update': 'ArtistController.update',
+  'post /api/artist': 'ArtistController.create',
+  'get /api/artist/:id': 'ArtistController.getOne',
+  'get /api/artist/url/:path': 'ArtistController.getByUrl',
+
+  /**
    * Entry routes
    */
   'get /api/entry': 'EntryController.getAll',
@@ -35,13 +44,22 @@ module.exports.routes = {
   'get /api/entry/:id': 'EntryController.getOne',
 
   /**
+   * Event routes
+   */
+  'get /api/event': 'EventController.getSome',
+  'post /api/event/update': 'EventController.update',
+  'post /api/event': 'EventController.create',
+  'get /api/event/:id': 'EventController.getOne',
+  'get /api/event/url/:path': 'EventController.getByUrl',
+
+  /**
    * Merch routes
    */
   'get /api/merch': 'MerchController.getSome',
   'post /api/merch/update': 'MerchController.update',
   'post /api/merch': 'MerchController.create',
   'get /api/merch/:id': 'MerchController.getOne',
-  'get /api/merch/url/:path': 'CommitteeController.getByUrl',
+  'get /api/merch/url/:path': 'MerchController.getByUrl',
 
 
   /**

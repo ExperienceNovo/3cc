@@ -21,7 +21,17 @@
 <section id="about-1" class="content-section" style="text-align:left">
     <div class="about-section">
         <div class="container">
-            <h2 style="color:white">Merch</h2>
+            <h2 style="color:white">Events</h2>
+            <div ng-repeat="event in events" class="col-md-12">
+                <h2><a href="event/{{event}}">{{event}}</a></h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about-1" class="content-section" style="text-align:left">
+    <div class="about-section">
+        <div class="container">
+            <h2 style="color:white">Merch</h2><br><br>
             <div ng-repeat="item in merch" class="col-md-4">
                 <a href="merch/{{item.urlTitle}}">
                     <img src="{{item.imageUrl}}" style="height:88px">
@@ -30,10 +40,10 @@
                 <p style="color:white">${{item.price}}, {{item.stock}} in stock</p>
                 <p style="color:white">{{item.description}}</p>
                 <p style="color:white"><a href="member/{{item.user.username}}">{{item.user.username}}</a></p>
-
             </div>
         </div>
     </div>
 </section>
 
+            
 <div ng-include="'footer/index.tpl.html'"></div>

@@ -6,65 +6,80 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function ($tem
     "  <div class=\"container\">\n" +
     "        <h2>Three Corners Collective</h2>\n" +
     "        <h3 style=\"color:black\">Our Mission</h3>\n" +
-    "        <p>empower creators to find their highest excitment - engeder guidence and structural expertise: facilitate success</p>\n" +
+    "        <p>empower creators to find their highest excitement - engender guidance and structural expertise: facilitate success</p>\n" +
     "    </div>\n" +
     "</section>\n" +
     "\n" +
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <h2>About</h2>\n" +
+    "            <!--<h2>our paradigm</h2>-->\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +
     "\n" +
     "<section id=\"contact\" class=\"container content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"container\">\n" +
+    "        <p>the three corners of our creative paradigm</p>\n" +
     "        <h3>Artists</h3>\n" +
+    "        <p>From open mics to bonnaroo, were here for you.</p>\n" +
+    "        <p>Transparent and open contracts - allies in your career</p>\n" +
     "        <h3>Audiences</h3>\n" +
     "        <h3>Venues</h3>\n" +
-    "        <p>the three corners of our creative paradigm</p>\n" +
+    "        <p>Modern technology pushing the limits of innovation - from hd productions to the best venue engineering - we create unforgettable experiences.</p>\n" +
+    "        <p>High quality production environments</p>\n" +
+    "        <p>Live broadcasts</p>\n" +
+    "        <p>Unmatched sound</p>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</section>\n" +
+    "\n" +
+    "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "    <div class=\"about-section\">\n" +
+    "        <div class=\"container\">\n" +
+    "            <h2>The Team</h2>\n" +
+    "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +
     "\n" +
     "<section id=\"contact\" class=\"container content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"row\">\n" +
-    "        <div class=\"\">\n" +
-    "            <h2>The Team</h2>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\"><a href=\"artist/matt-phillips\">Matt Phillips</a></h3>\n" +
+    "            <p>Music guy</p>\n" +
     "        </div>\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\"><a href=\"artist/matt-phillips\">Matt Phillips</a></h3>\n" +
-    "                <p>Music guy</p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\">Trevor Overman</h3>\n" +
-    "                <p>cre8</p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\">Cameron Cook</h3>\n" +
-    "                <p>tri-athlete<p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\">Gabriel Reynolds</h3>\n" +
-    "                <p>Music Director</p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\">Sarah Deweese</h3>\n" +
-    "                <p>Cool Kat</p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\">Maura Hartzman</h3>\n" +
-    "                <p>Cat Mom</p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\">Stephanie</h3>\n" +
-    "                <p>Booking</p>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <h3 style=\"color:black\">CPA</h3>\n" +
-    "                <p>CPA</p>\n" +
-    "            </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\">Trevor Overman</h3>\n" +
+    "            <p>cre8</p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\">Cameron Cook</h3>\n" +
+    "            <p>tri-athlete<p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\">Gabriel Reynolds</h3>\n" +
+    "            <p>Music Director</p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\">Sarah Deweese</h3>\n" +
+    "            <p>Cool Kat</p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\">Maura Hartzman</h3>\n" +
+    "            <p>Cat Mom</p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\">Stephanie</h3>\n" +
+    "            <p>Booking</p>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-4\">\n" +
+    "            <h3 style=\"color:black\">CPA</h3>\n" +
+    "            <p>CPA</p>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-md-12\">\n" +
+    "            <a href=\"/register\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Lend a hand</h1></a>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "    <div class=\"spacing-50\"></div>\n" +
@@ -168,8 +183,8 @@ angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($t
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <div class=\"\">\n" +
-    "                <h2><a href=\"artist/matt-phillips\">Matt Phillips</a></h2>\n" +
+    "            <div ng-repeat=\"artist in artists\" class=\"\">\n" +
+    "                <h2><a href=\"artist/{{artist}}\">{{artist}}</a></h2>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -203,7 +218,17 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <h2 style=\"color:white\">Merch</h2>\n" +
+    "            <h2 style=\"color:white\">Events</h2>\n" +
+    "            <div ng-repeat=\"event in events\" class=\"col-md-12\">\n" +
+    "                <h2><a href=\"event/{{event}}\">{{event}}</a></h2>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</section>\n" +
+    "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "    <div class=\"about-section\">\n" +
+    "        <div class=\"container\">\n" +
+    "            <h2 style=\"color:white\">Merch</h2><br><br>\n" +
     "            <div ng-repeat=\"item in merch\" class=\"col-md-4\">\n" +
     "                <a href=\"merch/{{item.urlTitle}}\">\n" +
     "                    <img src=\"{{item.imageUrl}}\" style=\"height:88px\">\n" +
@@ -212,12 +237,12 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "                <p style=\"color:white\">${{item.price}}, {{item.stock}} in stock</p>\n" +
     "                <p style=\"color:white\">{{item.description}}</p>\n" +
     "                <p style=\"color:white\"><a href=\"member/{{item.user.username}}\">{{item.user.username}}</a></p>\n" +
-    "\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +
     "\n" +
+    "            \n" +
     "<div ng-include=\"'footer/index.tpl.html'\"></div>");
 }]);
 
@@ -347,8 +372,9 @@ angular.module("event/index.tpl.html", []).run(["$templateCache", function ($tem
     "</div>\n" +
     "\n" +
     "<div class=\"container\" style=\"text-align:left\">\n" +
-    "	<h2><a href=\"venue/event\">Venue</a></h2>\n" +
-    "	<h2><a href=\"artist/event\">Artists</a></h2>\n" +
+    "	<h2><a href=\"event/event\">3CC features</a></h2>\n" +
+    "	<h2><a href=\"venue/local-506\">Local 506</a></h2>\n" +
+    "	<h2><a href=\"artist/event\">Matt Phillips, Age Of Sages</a></h2>\n" +
     "	<h2><a href=\"event/event\">Audience</a></h2>\n" +
     "	<h2><a href=\"event/event\">Content</a></h2>\n" +
     "	<h2><a href=\"event/event\">Stats</a></h2>\n" +
@@ -365,14 +391,14 @@ angular.module("footer/index.tpl.html", []).run(["$templateCache", function ($te
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\" style=\"font-family:Oswald\">\n" +
     "			<div class=\"col-xs-10\">\n" +
-    "                <h4>{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:50px\" src=\"images/clear_logo.png\"> three corners collective</a></h4>\n" +
+    "                <h4>{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:50px\" src=\"images/threecorners3.png\"> three corners collective</a></h4>\n" +
     "            </div>\n" +
     "             <div class=\"col-xs-2\">\n" +
     "                <h4 style=\"margin-top:10px\">\n" +
-    "                    <a href=\"https://www.facebook.com/threecornerscollective/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a>\n" +
-    "                    <a href=\"#\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a>\n" +
+    "                    <a href=\"https://www.facebook.com/threecornerscollective\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a>\n" +
+    "                    <a href=\"https://www.twitter.com/3cc\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a>\n" +
     "                    <a href=\"https://www.instagram.com/threecornerscollective\" target=\"_blank\"><i class=\"fa fa-instagram\"></i></a>\n" +
-    "                    <a href=\"#\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a>\n" +
+    "                    <a href=\"https://www.linkedin.com/organization/16264809\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a>\n" +
     "                </h4>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -531,7 +557,7 @@ angular.module("merch/index.tpl.html", []).run(["$templateCache", function ($tem
     "<div class=\"container\">\n" +
     "	<div class=\"pull-left\">\n" +
     "		<div style=\"\">\n" +
-    "			<img class=\"avatar\" ng-src=\"{{merch.imageUrl}}\"/>\n" +
+    "			<img class=\"avatar\" ng-src=\"images/triangle3cc.png\"/>\n" +
     "			<div class=\"\"></div>\n" +
     "		</div>\n" +
     "	</div>\n" +
@@ -567,6 +593,7 @@ angular.module("nav/index.tpl.html", []).run(["$templateCache", function ($templ
     "                <span class=\"icon-bar\" style=\"background-color:black\"></span>\n" +
     "                <span class=\"icon-bar\" style=\"background-color:black\"></span>\n" +
     "            </button>\n" +
+    "            <!--<img style=\"width:50px;float:left\" src=\"images/triangle3cc.png\"/>-->\n" +
     "            <a style=\"font-family:Oswald\" class=\"navbar-brand\" href=\"/\">three corners collective</a>\n" +
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\">\n" +
@@ -698,16 +725,13 @@ angular.module("venue/index.tpl.html", []).run(["$templateCache", function ($tem
     "</div>\n" +
     "\n" +
     "<div class=\"container\" style=\"text-align:left\">\n" +
-    "	<h2><a href=\"event/event\">event</a></h2>\n" +
-    "	<h2><a href=\"event/event\">event</a></h2>\n" +
-    "	<h2><a href=\"event/event\">event</a></h2>\n" +
-    "	<h2><a href=\"event/event\">event</a></h2>\n" +
-    "	<h2><a href=\"event/event\">event</a></h2>\n" +
+    "	<h2><a href=\"event/event\">3CC features</a></h2>\n" +
+    "	<h2><a href=\"event/event\">Emo Night</a></h2>\n" +
+    "	<h2><a href=\"event/event\">Metal</a></h2>\n" +
     "	<h2><a href=\"event/event\">event</a></h2>\n" +
     "	\n" +
-    "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
-    "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
-    "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
+    "	<h2><a href=\"artist/artist\">Matt Phillips</a></h2>\n" +
+    "	<h2><a href=\"artist/artist\">Age Of Sages</a></h2>\n" +
     "	<h2><a href=\"artist/artist\">artist</a></h2>\n" +
     "\n" +
     "	<h2>past shows - artists who have played here in the 3cc network</h2>\n" +
