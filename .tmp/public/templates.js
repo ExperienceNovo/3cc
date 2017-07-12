@@ -7,6 +7,8 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function ($tem
     "        <h2>Three Corners Collective</h2>\n" +
     "        <h3 style=\"color:black\">Our Mission</h3>\n" +
     "        <p>empower creators to find their highest excitement - engender guidance and structural expertise: facilitate success</p>\n" +
+    "        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "\n" +
     "    </div>\n" +
     "</section>\n" +
     "\n" +
@@ -24,12 +26,18 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function ($tem
     "        <h3>Artists</h3>\n" +
     "        <p>From open mics to bonnaroo, were here for you.</p>\n" +
     "        <p>Transparent and open contracts - allies in your career</p>\n" +
+    "        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "\n" +
     "        <h3>Audiences</h3>\n" +
+    "        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "\n" +
     "        <h3>Venues</h3>\n" +
     "        <p>Modern technology pushing the limits of innovation - from hd productions to the best venue engineering - we create unforgettable experiences.</p>\n" +
     "        <p>High quality production environments</p>\n" +
     "        <p>Live broadcasts</p>\n" +
     "        <p>Unmatched sound</p>\n" +
+    "        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "\n" +
     "\n" +
     "    </div>\n" +
     "</section>\n" +
@@ -162,6 +170,7 @@ angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($t
     "            <h2>Artists</h2>\n" +
     "            <p>three corners collective</p>\n" +
     "            <p>Jane S Brown</p>\n" +
+    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "\n" +
     "        </div>\n" +
     "</section>\n" +
@@ -200,6 +209,8 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "        <div class=\"\">\n" +
     "            <h2>Audiences</h2>\n" +
     "            <p>Three Corners Collective</p>\n" +
+    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "\n" +
     "        </div>\n" +
     "</section>\n" +
     "\n" +
@@ -429,15 +440,18 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "<section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
     "  <div class=\"container\">\n" +
     "        <div class=\"col-md-12\">\n" +
-    "            <h1 style=\"color:black\">Artists</h1>\n" +
+    "             <a href=\"/artists\"><h1 style=\"color:black\">Artists</h1></a>\n" +
+    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "            <p></p>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-12\">\n" +
-    "            <h1 style=\"color:black\">Audiences</h1>\n" +
+    "            <a href=\"/audiences\"><h1 style=\"color:black\">Audiences</h1></a>\n" +
+    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "            <p></p>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-12\">\n" +
-    "            <h1 style=\"color:black\">Venues</h1>\n" +
+    "            <a href=\"/venues\"><h1 style=\"color:black\">Venues</h1></a>\n" +
+    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "            <p></p>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-12\">\n" +
@@ -450,7 +464,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
     "            <div class=\"col-md-12\">\n" +
-    "                <h2><a href=\"register\">Work with us</a></h2>\n" +
+    "                <h2><a href=\"register\">Create an Account</a></h2>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -458,6 +472,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "\n" +
     "<section id=\"contact\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"container\">\n" +
+    "        <div class=\"col-md-12\">\n" +
+    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "        </div>\n" +
     "        <div class=\"col-md-4\">\n" +
     "            <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
     "        </div>\n" +
@@ -751,7 +768,8 @@ angular.module("venues/index.tpl.html", []).run(["$templateCache", function ($te
     "        <div class=\"\">\n" +
     "            <h2>Venues</h2>\n" +
     "\n" +
-    "            <h1>are you a venue</h1>\n" +
+    "            <h2>are you a venue</h2>\n" +
+    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "\n" +
     "        </div>\n" +
     "    </div>\n" +
