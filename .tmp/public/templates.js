@@ -439,18 +439,18 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "\n" +
     "<section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
     "  <div class=\"container\">\n" +
-    "        <div class=\"col-md-12\">\n" +
+    "        <!--<div class=\"col-md-12\">\n" +
     "             <a href=\"/artists\"><h1 style=\"color:black\">Artists</h1></a>\n" +
     "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "            <p></p>\n" +
-    "        </div>\n" +
+    "        </div>-->\n" +
     "        <div class=\"col-md-12\">\n" +
-    "            <a href=\"/audiences\"><h1 style=\"color:black\">Audiences</h1></a>\n" +
+    "            <a href=\"/audiences\"><h1 style=\"color:black\">lorem ipsum</h1></a>\n" +
     "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "            <p></p>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-12\">\n" +
-    "            <a href=\"/venues\"><h1 style=\"color:black\">Venues</h1></a>\n" +
+    "            <a href=\"/venues\"><h1 style=\"color:black\">lorem ipsum</h1></a>\n" +
     "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
     "            <p></p>\n" +
     "        </div>\n" +
