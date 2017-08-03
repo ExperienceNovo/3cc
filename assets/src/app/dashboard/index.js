@@ -11,6 +11,9 @@ angular.module( '3cc.dashboard', [
 			}
 		},
 		resolve: {
+			events: ['EventModel', function(EventModel) {
+				return EventModel.getSome(100,0, 'createdAt DESC');
+            }],
             merch: ['MerchModel', function(MerchModel) {
 				return MerchModel.getSome(100,0, 'createdAt DESC');
             }], 
@@ -21,13 +24,21 @@ angular.module( '3cc.dashboard', [
 	});
 }])
 
-.controller( 'DashboardCtrl', [ '$scope', 'config', 'titleService', 'merch', 'MerchModel', 'venues', 'VenueModel', function DashboardController( $scope, config, titleService, merch, MerchModel, venues, VenueModel ) {
+.controller( 'DashboardCtrl', [ '$scope', 'config', 'events', 'merch', 'MerchModel', 'titleService', 'venues', 'VenueModel', function DashboardController( $scope, config, events, merch, MerchModel, titleService, venues, VenueModel ) {
 	titleService.setTitle('Dashboard - Three Corners Collective');
-
+	$scope.events = events;
 	$scope.merch = merch;
+	$scope.newEvent = {};
 	$scope.newMerch = {};
     $scope.newVenue = {};
 	$scope.venues = venues;
+
+	$scope.createEvent = function() {
+        $scope.newEvent.user = config.currentUser.id;
+        VenueModel.create($scope.newEvent).then(function(model) {
+            $scope.newEvent = {};
+        });
+    };
 
 	$scope.createMerch = function() {
         $scope.newMerch.user = config.currentUser.id;
@@ -42,8 +53,5 @@ angular.module( '3cc.dashboard', [
             $scope.newVenue = {};
         });
     };
-
-
-
 
 }]);
