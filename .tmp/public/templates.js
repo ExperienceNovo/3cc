@@ -450,8 +450,8 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "            <div class=\"row\">\n" +
     "                <div class=\"col-md-6\">\n" +
     "                    <a href=\"/artists\"><h1 style=\"color:black\">supporting artists</h1></a>\n" +
-    "                    <p>though creating coalitions in skillshare with artists - guidance and doing the groundwork; surrounded network of professional support. lorem intelligent office mutual growth lorem monetize create lorem organization ipsum lorem</p>\n" +
-    "                    <p></p>\n" +
+    "                    <p>though creating coalitions in skillshare with artists - guidance and doing the groundwork; surrounded network of professional support. intelligent professional mutual growth itentified and asserted value monetize create support organization sponsorship opportunities</p>\n" +
+    "                    <p>holistic artist support with deep guidance on multiple levels</p>\n" +
     "                </div>\n" +
     "                <div class=\"col-md-6\">\n" +
     "\n" +
@@ -464,16 +464,16 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "                </div>\n" +
     "                <div class=\"col-md-6\" style=\"text-align:right\">\n" +
     "                    <a href=\"/audiences\"><h1 style=\"color:black\">creating experiences</h1></a>\n" +
-    "                    <p>expriencing art with incredible new ipsum lorem ipsum excited ipsum lorem ipsum lorem exuberant lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
-    "                    <p></p>\n" +
+    "                    <p>expriencing art with incredible production technology highfidelity studio-quality broadcasts multiple experiences flowercouch podcast series events 3cc presents collaborations cre8 chapter show broadcast</p>\n" +
+    "                    <p>3cc presents cre8 live. scalable events, and broadcasts: series</p>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"spacing-100\"></div>\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-md-6\">\n" +
     "                    <a href=\"/venues\"><h1 style=\"color:black\">building communities</h1></a>\n" +
-    "                    <p>bring together spaces for growth ipsum connected ipsum mutual support lorem ipsum creating ipsum lorem ipsum lorem excited lorem ipsum lorem ipsum</p>\n" +
-    "                    <p></p>\n" +
+    "                    <p>bring together spaces for growth create connected communities for mutual support that scale creating joy though following what is excitement choose creative unification and transcendence</p>\n" +
+    "                    <p>open source and transparent operations</p>\n" +
     "                </div>\n" +
     "                <div class=\"col-md-6\"></div>\n" +
     "            </div>\n" +
@@ -504,7 +504,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function ($temp
     "            <div class=\"spacing-50\"></div>\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-md-12\">\n" +
-    "                    <p>cre8 change love inclusion and support connect new art and stories connection unity collective excitement performance technology support stream merch create value business create group vision professional edruite lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum experience ipsum lorem ipsum enjoy ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "                    <p>cre8 change love inclusion and support connect new art and stories connection unity collective excitement performance technology support stream merch create value business create group vision professional edruite novo crypto sponsorship platform creator coalition organization skilled professional trade experience time value responsibility enjoy transparency building love chapter systems scalable modalities flower podcast performance media audience reach growth share</p>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"row\">\n" +
@@ -533,7 +533,7 @@ angular.module("login/index.tpl.html", []).run(["$templateCache", function ($tem
     "        <div class=\"row\">\n" +
     "            <div class=\"col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1\">\n" +
     "                <div class=\"site-heading\">\n" +
-    "                    <h1 class=\"blue-title\">Login</h1>\n" +
+    "                    <h1 class=\"blue-title\" style=\"color:black\">Login</h1>\n" +
     "                    <hr class=\"small\">\n" +
     "                    <h2 class=\"post-title\">\n" +
     "                        Welcome back!\n" +
@@ -674,7 +674,7 @@ angular.module("register/index.tpl.html", []).run(["$templateCache", function ($
     "        <div class=\"row\">\n" +
     "            <div class=\"col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1\">\n" +
     "                <div class=\"site-heading\">\n" +
-    "                    <h1 class=\"blue-title\">Create an Account</h1>\n" +
+    "                    <h1 class=\"blue-title\" style=\"color:black\">Create an Account</h1>\n" +
     "                    <hr class=\"small\">\n" +
     "                    <h2 class=\"post-title\">\n" +
     "                        Welcome!\n" +
