@@ -16,4 +16,5 @@ angular.module( '3cc.home', [
 .controller( 'HomeCtrl', [ '$location', '$scope', 'config', 'titleService', function HomeController( $location, $scope, config, titleService ) {
 	titleService.setTitle('Three Corners Collective');
 	$scope.currentUser = config.currentUser;
+	//if($scope.currentUser){$location.path('/dashboard')}
 }]);

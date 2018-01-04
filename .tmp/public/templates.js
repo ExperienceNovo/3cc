@@ -120,7 +120,6 @@ angular.module("artist/index.tpl.html", []).run(["$templateCache", function ($te
     "	}\n" +
     "</style>	\n" +
     "\n" +
-    "\n" +
     "<div class=\"profile-header\">\n" +
     "	<div class=\"member-cover\">\n" +
     "		<img src=\"images/3ccbg.jpg\"/>\n" +
@@ -152,6 +151,9 @@ angular.module("artist/index.tpl.html", []).run(["$templateCache", function ($te
     "</div>\n" +
     "\n" +
     "<div class=\"container\" style=\"text-align:left\">\n" +
+    "	<br><br><br><br>\n" +
+    "	<iframe width='560' height='315' src='https://www.bidio.co/v/57e145a21332ce0300731bf7' frameborder='0' allowfullscreen></iframe>\n" +
+    "	<b><br><br><br>\n" +
     "	<h2><a href=\"event/event\">event</a></h2>\n" +
     "	<h2><a href=\"venue/test-venue\">venue</a></h2>\n" +
     "	<h2>settlement sheet info</h2>\n" +
@@ -164,15 +166,16 @@ angular.module("artist/index.tpl.html", []).run(["$templateCache", function ($te
 
 angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("artists/index.tpl.html",
-    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
-    "  <div class=\"container\">\n" +
-    "        <div class=\"\">\n" +
+    "<section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "   <div class=\"container\">\n" +
+    "        <div class=\"col-md-12\">\n" +
     "            <h2>Artists</h2>\n" +
-    "            <p>three corners collective</p>\n" +
-    "            <p>Jane S Brown</p>\n" +
-    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
-    "\n" +
+    "            <h3>three corners collective</h3>\n" +
+    "            <h3>Jane S Brown</h3>\n" +
+    "            <h3>are you an artist?</h3>\n" +
     "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"spacing-25\"></div>\n" +
     "</section>\n" +
     "\n" +
     "<section ng-show=\"currentUser\" class=\"container\">\n" +
@@ -192,7 +195,7 @@ angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($t
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <div ng-repeat=\"artist in artists\" class=\"\">\n" +
+    "            <div ng-repeat=\"artist in artists\" class=\"col-md-12\">\n" +
     "                <h2><a href=\"artist/{{artist}}\">{{artist}}</a></h2>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -204,14 +207,15 @@ angular.module("artists/index.tpl.html", []).run(["$templateCache", function ($t
 
 angular.module("audiences/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("audiences/index.tpl.html",
-    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
+    "<section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
     "  <div class=\"container\">\n" +
-    "        <div class=\"\">\n" +
+    "        <div class=\"col-md-12\">\n" +
     "            <h2>Audiences</h2>\n" +
     "            <p>Three Corners Collective</p>\n" +
     "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
-    "\n" +
     "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"spacing-25\"></div>\n" +
     "</section>\n" +
     "\n" +
     "<section ng-show=\"currentUser\" class=\"container\">\n" +
@@ -229,7 +233,7 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <h2 style=\"color:white\">Events</h2>\n" +
+    "            <div class=\"col-md-12\"><h2 style=\"color:white\">Events</h2></div>\n" +
     "            <div ng-repeat=\"event in events\" class=\"col-md-12\">\n" +
     "                <h2><a href=\"event/{{event}}\">{{event}}</a></h2>\n" +
     "            </div>\n" +
@@ -237,7 +241,7 @@ angular.module("audiences/index.tpl.html", []).run(["$templateCache", function (
     "    </div>\n" +
     "</section>\n" +
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
-    "    <div class=\"about-section\">\n" +
+    "    <div class=\"\">\n" +
     "        <div class=\"container\">\n" +
     "            <h2 style=\"color:white\">Merch</h2><br><br>\n" +
     "            <div ng-repeat=\"item in merch\" class=\"col-md-4\">\n" +
@@ -274,9 +278,6 @@ angular.module("dashboard/index.tpl.html", []).run(["$templateCache", function (
     "            <h2>credibility (settlement sheet - CPA) - $8.88</h2>\n" +
     "            <h2>growth - $88.88</h2>\n" +
     "            <div class=\"spacing-50\"></div>\n" +
-    "\n" +
-    "\n" +
-    "\n" +
     "\n" +
     "            \n" +
     "        </div>\n" +
@@ -405,9 +406,9 @@ angular.module("footer/index.tpl.html", []).run(["$templateCache", function ($te
     "                <h4 style=\"font-size:20px\">{{date | date: 'yyyy'}} <a href=\"/\"><img style=\"height:40px;padding-left:5px;padding-right:5px;\" src=\"images/icon-1.png\"> three corners collective</a></h4>\n" +
     "            </div>\n" +
     "             <div class=\"col-xs-2\">\n" +
-    "                <h4 style=\"margin-top:10px\">\n" +
+    "                <h4 style=\"margin-top:18px\">\n" +
     "                    <a href=\"https://www.facebook.com/threecornerscollective\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a>\n" +
-    "                    <a href=\"https://www.twitter.com/3cc\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a>\n" +
+    "                    <a href=\"https://www.twitter.com/threecornersco\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a>\n" +
     "                    <a href=\"https://www.instagram.com/threecornerscollective\" target=\"_blank\"><i class=\"fa fa-instagram\"></i></a>\n" +
     "                    <a href=\"https://www.linkedin.com/organization/16264809\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a>\n" +
     "                </h4>\n" +
@@ -419,74 +420,108 @@ angular.module("footer/index.tpl.html", []).run(["$templateCache", function ($te
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<header class=\"intro\">\n" +
-    "    <div class=\"intro-body\">\n" +
-    "        <div class=\"container\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-8 col-md-offset-2\">\n" +
-    "                    <img class=\"intro-img\" src=\"images/triangle3cc.png\">\n" +
-    "                    <div class=\"spacing-15\"></div>\n" +
-    "                    <!--<p class=\"intro-text\">Three Corners Collective</p>-->\n" +
-    "                    <!--play video-->\n" +
-    "                    <a href=\"#about\" class=\"btn btn-circle page-scroll\" du-smooth-scroll>\n" +
-    "                        <i class=\"fa fa-angle-double-down animated\"></i>\n" +
-    "                    </a>\n" +
+    "<div ng-show=\"currentUser\">\n" +
+    "    <h2><a href=\"/member/{{currentUser.username}}\">{{currentUser.username}}</a></h2>\n" +
+    "    <h2><a href=\"/dashboard\">Dashboard</a></h2>\n" +
+    "</div>\n" +
+    "<div ng-show=\"!currentUser\">\n" +
+    "    <header class=\"intro\">\n" +
+    "        <div class=\"intro-body\">\n" +
+    "            <div class=\"container\">\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-md-8 col-md-offset-2\">\n" +
+    "                        <img class=\"intro-img\" src=\"images/triangle3cc.png\">\n" +
+    "                        <div class=\"spacing-15\"></div>\n" +
+    "                        <!--<p class=\"intro-text\">Three Corners Collective</p>-->\n" +
+    "                        <!--play video-->\n" +
+    "                        <a href=\"#about\" class=\"btn btn-circle page-scroll\" du-smooth-scroll>\n" +
+    "                            <i class=\"fa fa-angle-double-down animated\"></i>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "    </div>\n" +
-    "</header>\n" +
+    "    </header>\n" +
     "\n" +
-    "<section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
-    "  <div class=\"container\">\n" +
-    "        <!--<div class=\"col-md-12\">\n" +
-    "             <a href=\"/artists\"><h1 style=\"color:black\">Artists</h1></a>\n" +
-    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
-    "            <p></p>\n" +
-    "        </div>-->\n" +
-    "        <div class=\"col-md-12\">\n" +
-    "            <a href=\"/audiences\"><h1 style=\"color:black\">lorem ipsum</h1></a>\n" +
-    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
-    "            <p></p>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-12\">\n" +
-    "            <a href=\"/venues\"><h1 style=\"color:black\">lorem ipsum</h1></a>\n" +
-    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
-    "            <p></p>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-12\">\n" +
-    "            <a href=\"/about\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Learn More</h1></a>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</section>\n" +
+    "    <section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "      <div class=\"container\">\n" +
+    "        \n" +
+    "            <div class=\"spacing-100\"></div>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-6\">\n" +
+    "                    <a href=\"/artists\"><h1 style=\"color:black\">supporting artists</h1></a>\n" +
+    "                    <p>though creating coalitions in skillshare with artists - guidance and doing the groundwork; surrounded network of professional support. lorem intelligent office mutual growth lorem monetize create lorem organization ipsum lorem</p>\n" +
+    "                    <p></p>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-6\">\n" +
     "\n" +
-    "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
-    "    <div class=\"about-section\">\n" +
-    "        <div class=\"container\">\n" +
-    "            <div class=\"col-md-12\">\n" +
-    "                <h2><a href=\"register\">Create an Account</a></h2>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"spacing-100\"></div>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-6\">\n" +
+    "                    <img style=\"width:50%\" src=\"images/threecorners3.png\">\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-6\" style=\"text-align:right\">\n" +
+    "                    <a href=\"/audiences\"><h1 style=\"color:black\">creating experiences</h1></a>\n" +
+    "                    <p>expriencing art with incredible new ipsum lorem ipsum excited ipsum lorem ipsum lorem exuberant lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "                    <p></p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"spacing-100\"></div>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-6\">\n" +
+    "                    <a href=\"/venues\"><h1 style=\"color:black\">building communities</h1></a>\n" +
+    "                    <p>bring together spaces for growth ipsum connected ipsum mutual support lorem ipsum creating ipsum lorem ipsum lorem excited lorem ipsum lorem ipsum</p>\n" +
+    "                    <p></p>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-6\"></div>\n" +
+    "            </div>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <a href=\"/about\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Learn More</h1></a>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"spacing-100\"></div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </section>\n" +
+    "\n" +
+    "    <section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "        <div class=\"about-section\">\n" +
+    "            <div class=\"container\">\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-md-12\">\n" +
+    "                        <h2><a href=\"register\">Create an Account</a></h2>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "    </div>\n" +
-    "</section>\n" +
+    "    </section>\n" +
     "\n" +
-    "<section id=\"contact\" class=\"content-section\" style=\"text-align:left\">\n" +
-    "    <div class=\"container\">\n" +
-    "        <div class=\"col-md-12\">\n" +
-    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "    <section id=\"contact\" class=\"content-section\" style=\"text-align:left\">\n" +
+    "        <div class=\"container\">\n" +
+    "            <div class=\"spacing-50\"></div>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <p>cre8 change love inclusion and support connect new art and stories connection unity collective excitement performance technology support stream merch create value business create group vision professional edruite lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum experience ipsum lorem ipsum enjoy ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-4\">\n" +
+    "                    <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-4\">\n" +
+    "                    <a href=\"/audiences\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-4\">\n" +
+    "                    <a href=\"/venues\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Venues</h1></a>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"spacing-50\"></div>\n" +
     "        </div>\n" +
-    "        <div class=\"col-md-4\">\n" +
-    "            <a href=\"/artists\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Artists</h1></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-4\">\n" +
-    "            <a href=\"/audiences\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Audiences</h1></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-4\">\n" +
-    "            <a href=\"/venues\"><h1 style=\"color:black;width:100%\" class=\"btn btn-default\">Venues</h1></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"spacing-50\"></div>\n" +
-    "    </div>\n" +
-    "</section>\n" +
+    "    </section>\n" +
+    "</div>\n" +
     "\n" +
     "<div ng-include=\"'footer/index.tpl.html'\"></div>");
 }]);
@@ -763,22 +798,18 @@ angular.module("venue/index.tpl.html", []).run(["$templateCache", function ($tem
 
 angular.module("venues/index.tpl.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("venues/index.tpl.html",
-    "<section id=\"about\" class=\"container content-section\" style=\"text-align:left\">\n" +
+    "<section id=\"about\" class=\"content-section\" style=\"text-align:left\">\n" +
     "  <div class=\"container\">\n" +
-    "        <div class=\"\">\n" +
+    "        <div class=\"col-md-12\">\n" +
     "            <h2>Venues</h2>\n" +
-    "\n" +
-    "            <h2>are you a venue</h2>\n" +
-    "            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>\n" +
-    "\n" +
+    "            <h2>creating experiences</h2>\n" +
+    "            <p>are you a venue?</p>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</section>\n" +
     "\n" +
     "\n" +
-    "\n" +
     "<section ng-show=\"currentUser\" class=\"container\">\n" +
-    "\n" +
     "    <form role=\"form\">\n" +
     "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.title\" type=\"text\" placeholder= \"venue title\"></div>\n" +
     "        <div class=\"form-group\"><input class=\"col-md-12 form-control\" ng-model=\"newVenue.address\" type=\"text\" placeholder= \"venue address\"></div>\n" +
@@ -791,13 +822,12 @@ angular.module("venues/index.tpl.html", []).run(["$templateCache", function ($te
     "        <br><br>\n" +
     "        <button style=\"width:100%\" ng-click=\"createVenue()\" type=\"submit\" class=\"btn btn-default\"><i class=\"fa fa-paper-plane\"></i> Submit</button>\n" +
     "    </form>\n" +
-    "    \n" +
     "</section>\n" +
     "\n" +
     "<section id=\"about-1\" class=\"content-section\" style=\"text-align:left\">\n" +
     "    <div class=\"about-section\">\n" +
     "        <div class=\"container\">\n" +
-    "            <div ng-repeat=\"venue in venues\" class=\"\">\n" +
+    "            <div ng-repeat=\"venue in venues\" class=\"col-md-12\">\n" +
     "                <h2><a href=\"venue/{{venue.urlTitle}}\">{{venue.title}}</a></h2>\n" +
     "                <p style=\"color:white\">{{venue.address}}</p>\n" +
     "                <p style=\"color:white\">{{venue.description}}</p>\n" +

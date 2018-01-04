@@ -111,7 +111,8 @@ a:hover,a:focus {
 	position: relative;
     display: table;
     width: 100%;
-    height: auto;
+    //height: auto;
+    height: 100vh;
     padding: 100px 0;
     text-align: center;
     color: #fff;
@@ -144,8 +145,8 @@ a:hover,a:focus {
 
 @media (min-width: 768px) {
     .intro {
-        height: 100%;
-        padding: 0;
+        //height: 100%;
+        //padding: 0;
     }
 
     .intro .intro-body .brand-heading {
@@ -194,10 +195,6 @@ a:hover,a:focus {
     -moz-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
-}
-
-.content-section {
-    padding-top: 100px;
 }
 
 .about-section {

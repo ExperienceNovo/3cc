@@ -1,70 +1,104 @@
-<header class="intro">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <img class="intro-img" src="images/triangle3cc.png">
-                    <div class="spacing-15"></div>
-                    <!--<p class="intro-text">Three Corners Collective</p>-->
-                    <!--play video-->
-                    <a href="#about" class="btn btn-circle page-scroll" du-smooth-scroll>
-                        <i class="fa fa-angle-double-down animated"></i>
-                    </a>
+<div ng-show="currentUser">
+    <h2><a href="/member/{{currentUser.username}}">{{currentUser.username}}</a></h2>
+    <h2><a href="/dashboard">Dashboard</a></h2>
+</div>
+<div ng-show="!currentUser">
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <img class="intro-img" src="images/triangle3cc.png">
+                        <div class="spacing-15"></div>
+                        <!--<p class="intro-text">Three Corners Collective</p>-->
+                        <!--play video-->
+                        <a href="#about" class="btn btn-circle page-scroll" du-smooth-scroll>
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<section id="about" class="content-section" style="text-align:left">
-  <div class="container">
-        <!--<div class="col-md-12">
-             <a href="/artists"><h1 style="color:black">Artists</h1></a>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p></p>
-        </div>-->
-        <div class="col-md-12">
-            <a href="/audiences"><h1 style="color:black">lorem ipsum</h1></a>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p></p>
-        </div>
-        <div class="col-md-12">
-            <a href="/venues"><h1 style="color:black">lorem ipsum</h1></a>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p></p>
-        </div>
-        <div class="col-md-12">
-            <a href="/about"><h1 style="color:black;width:100%" class="btn btn-default">Learn More</h1></a>
-        </div>
-    </div>
-</section>
+    <section id="about" class="content-section" style="text-align:left">
+      <div class="container">
+        
+            <div class="spacing-100"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/artists"><h1 style="color:black">supporting artists</h1></a>
+                    <p>though creating coalitions in skillshare with artists - guidance and doing the groundwork; surrounded network of professional support. lorem intelligent office mutual growth lorem monetize create lorem organization ipsum lorem</p>
+                    <p></p>
+                </div>
+                <div class="col-md-6">
 
-<section id="about-1" class="content-section" style="text-align:left">
-    <div class="about-section">
-        <div class="container">
-            <div class="col-md-12">
-                <h2><a href="register">Create an Account</a></h2>
+                </div>
+            </div>
+            <div class="spacing-100"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img style="width:50%" src="images/threecorners3.png">
+                </div>
+                <div class="col-md-6" style="text-align:right">
+                    <a href="/audiences"><h1 style="color:black">creating experiences</h1></a>
+                    <p>expriencing art with incredible new ipsum lorem ipsum excited ipsum lorem ipsum lorem exuberant lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="spacing-100"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/venues"><h1 style="color:black">building communities</h1></a>
+                    <p>bring together spaces for growth ipsum connected ipsum mutual support lorem ipsum creating ipsum lorem ipsum lorem excited lorem ipsum lorem ipsum</p>
+                    <p></p>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="/about"><h1 style="color:black;width:100%" class="btn btn-default">Learn More</h1></a>
+                </div>
+            </div>
+            <div class="spacing-100"></div>
+
+        </div>
+    </section>
+
+    <section id="about-1" class="content-section" style="text-align:left">
+        <div class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2><a href="register">Create an Account</a></h2>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact" class="content-section" style="text-align:left">
-    <div class="container">
-        <div class="col-md-12">
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+    <section id="contact" class="content-section" style="text-align:left">
+        <div class="container">
+            <div class="spacing-50"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>cre8 change love inclusion and support connect new art and stories connection unity collective excitement performance technology support stream merch create value business create group vision professional edruite lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum experience ipsum lorem ipsum enjoy ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/artists"><h1 style="color:black;width:100%" class="btn btn-default">Artists</h1></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/audiences"><h1 style="color:black;width:100%" class="btn btn-default">Audiences</h1></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/venues"><h1 style="color:black;width:100%" class="btn btn-default">Venues</h1></a>
+                </div>
+            </div>
+            <div class="spacing-50"></div>
         </div>
-        <div class="col-md-4">
-            <a href="/artists"><h1 style="color:black;width:100%" class="btn btn-default">Artists</h1></a>
-        </div>
-        <div class="col-md-4">
-            <a href="/audiences"><h1 style="color:black;width:100%" class="btn btn-default">Audiences</h1></a>
-        </div>
-        <div class="col-md-4">
-            <a href="/venues"><h1 style="color:black;width:100%" class="btn btn-default">Venues</h1></a>
-        </div>
-        <div class="spacing-50"></div>
-    </div>
-</section>
+    </section>
+</div>
 
 <div ng-include="'footer/index.tpl.html'"></div>

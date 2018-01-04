@@ -180,12 +180,6 @@ body {
 	color:#14B795
 }
 
-.wrapper,.row {
-	height:100%;
-	margin-left:0;
-	margin-right:0
-}
-
 .wrapper:before,.wrapper:after,.column:before,.column:after {
 	content:"";
 	display:table
