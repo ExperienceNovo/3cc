@@ -1,34 +1,42 @@
 <section id="about" class="content-section" style="text-align:left">
-   <div class="container">
-        <div class="col-md-12">
-            <h2>Artists</h2>
-            <h3>three corners collective</h3>
-            <h3>Jane S Brown</h3>
-            <h3>are you an artist?</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Artists</h2>
+                <h3>three corners collective</h3>
+                <h3>Jane S Brown</h3>
+                <h3>are you an artist?</h3>
+            </div>
         </div>
     </div>
     <div class="spacing-25"></div>
 </section>
 
 <section ng-show="currentUser" class="container">
-    <form role="form">
-        <input class="col-md-12" ng-model="newArtist.title" type="text" placeholder= "venue title">
-        <input class="col-md-12" ng-model="newVenue.address" type="text" placeholder= "venue address">
-        <input class="col-md-12" ng-model="newVenue.facebook" type="text" placeholder= "venue facebook">
-        <input class="col-md-12" ng-model="newVenue.twitter" type="text" placeholder= "venue twitter">
-        <input class="col-md-12" ng-model="newVenue.google" type="text" placeholder= "venue google">
-        <br><br>
-        <textarea style="width:100%;height:250px" ng-model="newVenue.description" type="text" placeholder= "venue description"></textarea>
-        <br><br>
-        <button ng-click="createArtist()" type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i> Submit</button>
-    </form>
+    <div class="row">
+        <div class="col-md-12">
+            <form role="form">
+                <input class="col-md-12" ng-model="newArtist.title" type="text" placeholder= "venue title">
+                <input class="col-md-12" ng-model="newVenue.address" type="text" placeholder= "venue address">
+                <input class="col-md-12" ng-model="newVenue.facebook" type="text" placeholder= "venue facebook">
+                <input class="col-md-12" ng-model="newVenue.twitter" type="text" placeholder= "venue twitter">
+                <input class="col-md-12" ng-model="newVenue.google" type="text" placeholder= "venue google">
+                <br><br>
+                <textarea style="width:100%;height:250px" ng-model="newVenue.description" type="text" placeholder= "venue description"></textarea>
+                <br><br>
+                <button ng-click="createArtist()" type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i> Submit</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 <section id="about-1" class="content-section" style="text-align:left">
     <div class="about-section">
         <div class="container">
-            <div ng-repeat="artist in artists" class="col-md-12">
-                <h2><a href="artist/{{artist}}">{{artist}}</a></h2>
+            <div ng-repeat="artist in artists" class="row">
+                <div class="col-md-12">
+                    <h2><a href="artist/{{artist}}">{{artist}}</a></h2>
+                </div>
             </div>
         </div>
     </div>
